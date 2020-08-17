@@ -588,7 +588,7 @@ return le(this,(function(n){switch(n.label){case 0:return[4,ae(e,{method:"HEAD"}
 case 1:return[2,405===(t=n.sent()).status?ae(e):t]}}))}))}(e),[2,pe[e]])}))}))}
 const he=function(e){var t=e.link,n=e.url,r=e.linkIncludePatterns,o=e.linkExcludePatterns
 return ce(void 0,void 0,void 0,(function(){var e,s,i,u,a
-return le(this,(function(c){switch(c.label){case 0:if(!l().isMatch(t,r,{exclude:o,bash:!0}))return[3,5]
+return le(this,(function(c){switch(c.label){case 0:if(!l().isMatch(t,r,{ignore:o,bash:!0}))return[3,5]
 e=n.href,c.label=1
 case 1:return c.trys.push([1,3,,4]),[4,fe(e)]
 case 2:return s=c.sent(),i=s.status,u=s.ok,[2,{link:t,href:t===e?null:e,description:i,pass:u}]
