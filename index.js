@@ -802,7 +802,7 @@ case 6:return[2]}}))}))}
 var we=function(e,t,n){return void 0===n&&(n=function(e){return e[1]}),Array.from(e.matchAll(t),n)},Re=function(e,t){switch(i().extname(e)){case".md":case".mdx":return we(t,/\[.*?\]\((?:<((?:\(.*?\)|.)*?)>|((?:\(.*?\)|.)*?))(?: ["'].*?["'])?\)/gm,(function(e){return e[2]||e[1]}))
 case".html":return we(t,/href="(.*?)"/gm)
 case".json":return we(t,/"(?:(?:https?:)?\/\/)?(?:)"/gm)
-default:return we(t,/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!\\\w]*))?)/gm,(function(e){return e[0]}))}}
+default:return we(t,/(((https?:\/\/)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/gm,(function(e){return e[0]}))}}
 const xe=function(e){var t=e.filePath,n=e.content
 return(Array.isArray(n)?[].concat.apply([],n.map((function(e){return Re(t,e)}))):Re(t,n)).filter((function(e){return e&&!e.startsWith("#")}))}
 var Ae=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
@@ -848,7 +848,7 @@ return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},Te=function(e,t){var n=e.fileP
 return Se(void 0,void 0,void 0,(function(){var e,t
 return Ce(this,(function(a){switch(a.label){case 0:return e={filePath:n},[4,"function"==typeof r?r(n):r]
 case 1:return e.content=a.sent(),[4,ke(xe(e),(function(e){return Se(void 0,void 0,void 0,(function(){var t
-return Ce(this,(function(n){switch(n.label){case 0:return t=function(e,t){return new URL(/^(https?:\/)?\//.test(e)?e:"https://"+e,t)}(e,i),[4,be({link:e,url:t,linkIncludePatterns:s,linkExcludePatterns:o})]
+return Ce(this,(function(n){switch(n.label){case 0:return(t=function(e,t){try{return new URL(/^(https?:\/)?\//.test(e)?e:"https://"+e,t)}catch(e){return null}}(e,i))?[4,be({link:e,url:t,linkIncludePatterns:s,linkExcludePatterns:o})]:[2,null]
 case 1:return[2,n.sent()]}}))}))}))]
 case 2:return t=a.sent().filter(Boolean),[2,{filePath:n,checks:t}]}}))}))},Oe=function(e,t){return Se(void 0,void 0,void 0,(function(){return Ce(this,(function(n){switch(n.label){case 0:return[4,ke(e,(function(e){return Te(e,t)}))]
 case 1:return[2,n.sent().filter(Boolean)]}}))}))},Pe=function(e){var t=e.checks,n=e.filePath
