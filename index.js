@@ -802,7 +802,7 @@ case 6:return[2]}}))}))}
 var we=function(e,t,n){return void 0===n&&(n=function(e){return e[1]}),Array.from(e.matchAll(t),n)},Re=function(e,t){switch(i().extname(e)){case".md":case".mdx":return we(t,/\[.*?\]\((?:<((?:\(.*?\)|.)*?)>|((?:\(.*?\)|.)*?))(?: ["'].*?["'])?\)/gm,(function(e){return e[2]||e[1]}))
 case".html":return we(t,/href="(.*?)"/gm)
 case".json":return we(t,/"(?:(?:https?:)?\/\/)?(?:)"/gm)
-default:return Array.from(t.matchAll(/\b(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[A-Z0-9+&@#/%=~_|$])/))}}
+default:return we(t,/(?:https?:)?\/\/(?:\w+\.)?\w+.\w+(?:\/(?:\([^ ]*?\)|[^ ()])+)?/gm,(function(e){return e[0]}))}}
 const xe=function(e){var t=e.filePath,n=e.content
 return(Array.isArray(n)?[].concat.apply([],n.map((function(e){return Re(t,e)}))):Re(t,n)).filter((function(e){return e&&!e.startsWith("#")}))}
 var Ae=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
