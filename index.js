@@ -787,16 +787,17 @@ case 1:return 405===(t=i.sent()).status?[2,_e(e,{method:"GET"})]:429===t.status&
 return he(this,(function(r){switch(r.label){case 0:return n=t,[4,ye(e)]
 case 1:return n.apply(void 0,[r.sent()]),[2]}}))}))}),r)}))]):[2,t]}}))}))},ve={},ge=function(e){return ce(void 0,void 0,void 0,(function(){var t,n
 return he(this,(function(r){return t=e.href,(n=ve[t])?[2,n]:(ve[t]=ye(e),[2,ve[t]])}))}))},me=new Set
-const be=function(e){var t=e.link,n=e.url,r=e.linkIncludePatterns,i=e.linkExcludePatterns
-return ce(void 0,void 0,void 0,(function(){var e,s,o,a,u
-return he(this,(function(c){switch(c.label){case 0:if(!function(e,t,n){var r=n.ignore,i=pe(n,["ignore"])
+const be=function(e){var t=e.link,n=e.url,r=e.linkIncludePatterns,i=e.linkExcludePatterns,s=e.dryRun
+return ce(void 0,void 0,void 0,(function(){var e,o,a,u,c
+return he(this,(function(h){switch(h.label){case 0:if(!function(e,t,n){var r=n.ignore,i=pe(n,["ignore"])
 if(l().isMatch(e,t,i)){if(r)if(Array.isArray(r)){var s=r.find((function(t){return l().isMatch(e,t,i)}))
 if(s)return me.add(s),!1}else if(l().isMatch(e,r,i))return me.add(r),!1
 return!0}return!1}(t,r,{ignore:i,bash:!0}))return[3,5]
-e=n.href,c.label=1
-case 1:return c.trys.push([1,3,,4]),[4,ge(n)]
-case 2:return s=c.sent(),o=s.status,a=s.ok,[2,{link:t,href:t===e?null:e,description:o,pass:a}]
-case 3:return u=c.sent(),[2,{link:t,href:e,description:["Error",u.code&&" "+u.code,u.message&&": "+u.message].filter(Boolean).join(""),pass:!1}]
+if(e=n.href,s)return[2,{link:t,href:t===e?null:e,description:"Skipped because of dry-run",pass:!0}]
+h.label=1
+case 1:return h.trys.push([1,3,,4]),[4,ge(n)]
+case 2:return o=h.sent(),a=o.status,u=o.ok,[2,{link:t,href:t===e?null:e,description:a,pass:u}]
+case 3:return c=h.sent(),[2,{link:t,href:e,description:["Error",c.code&&" "+c.code,c.message&&": "+c.message].filter(Boolean).join(""),pass:!1}]
 case 4:return[3,6]
 case 5:return[2,{link:t,description:"Excluded",pass:!0}]
 case 6:return[2]}}))}))}
@@ -846,13 +847,13 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},Te=function(e,t){var n=e.filePath,r=e.content,i=t.rootURL,s=t.linkIncludePatterns,o=t.linkExcludePatterns
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},Te=function(e,t){var n=e.filePath,r=e.content,i=t.rootURL,s=t.linkIncludePatterns,o=t.linkExcludePatterns,a=t.dryRun
 return Se(void 0,void 0,void 0,(function(){var e,t
-return Ce(this,(function(a){switch(a.label){case 0:return e={filePath:n},[4,"function"==typeof r?r(n):r]
-case 1:return e.content=a.sent(),[4,ke(xe(e),(function(e){return Se(void 0,void 0,void 0,(function(){var t
-return Ce(this,(function(n){switch(n.label){case 0:return(t=function(e,t){try{return new URL(/^(https?:\/)?\//.test(e)?e:"https://"+e,t)}catch(e){return null}}(e,i))?[4,be({link:e,url:t,linkIncludePatterns:s,linkExcludePatterns:o})]:[2,null]
+return Ce(this,(function(u){switch(u.label){case 0:return e={filePath:n},[4,"function"==typeof r?r(n):r]
+case 1:return e.content=u.sent(),[4,ke(xe(e),(function(e){return Se(void 0,void 0,void 0,(function(){var t
+return Ce(this,(function(n){switch(n.label){case 0:return(t=function(e,t){try{return new URL(/^(https?:\/)?\//.test(e)?e:"https://"+e,t)}catch(e){return null}}(e,i))?[4,be({link:e,url:t,linkIncludePatterns:s,linkExcludePatterns:o,dryRun:a})]:[2,null]
 case 1:return[2,n.sent()]}}))}))}))]
-case 2:return t=a.sent().filter(Boolean),[2,{filePath:n,checks:t}]}}))}))},Oe=function(e,t){return Se(void 0,void 0,void 0,(function(){return Ce(this,(function(n){switch(n.label){case 0:return[4,ke(e,(function(e){return Te(e,t)}))]
+case 2:return t=u.sent().filter(Boolean),[2,{filePath:n,checks:t}]}}))}))},Oe=function(e,t){return Se(void 0,void 0,void 0,(function(){return Ce(this,(function(n){switch(n.label){case 0:return[4,ke(e,(function(e){return Te(e,t)}))]
 case 1:return[2,n.sent().filter(Boolean)]}}))}))},Pe=function(e){var t=e.checks,n=e.filePath
 return"* "+(t.some((function(e){return!e.pass}))?"FAIL":"PASS")+": "+n+"\n"},Ie=function(e){var t=e.link,n=e.href,r=e.description
 return"  - "+(e.pass?"PASS":"FAIL")+": "+t+(n?" = "+n:"")+" ("+r+")"},Le=function(e,t){var n=e.filePath,r=e.checks,i=t.fileFormat,s=void 0===i?Pe:i,o=t.linkFormat,a=void 0===o?Ie:o,u=t.linkSeparator,l=void 0===u?"\n":u
