@@ -610,10 +610,11 @@ break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
 return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}}
-const f=function(){return p(void 0,void 0,void 0,(function(){var t,n,r,i
-return d(this,(function(s){switch(s.label){case 0:return[4,p(void 0,void 0,void 0,(function(){return d(this,(function(t){return[2,new Promise((function(t,n){(0,e.exec)("git diff -U0 --minimal origin/master",(function(e,r){return e?n(e):t(r)}))}))]}))}))]
-case 1:for(t=s.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),n=[],r=1;r<t.length;r+=2)(i=t[r+1].split("\n").filter((function(e){return e.startsWith("+")}))).length>0&&n.push({filePath:t[r],content:i})
-return[2,n]}}))}))}
+const f=function(t){var n=t.fileIncludePatterns,r=t.fileExcludePatterns
+return p(void 0,void 0,void 0,(function(){var t,i,s,o,a
+return d(this,(function(u){switch(u.label){case 0:return[4,p(void 0,void 0,void 0,(function(){return d(this,(function(t){return[2,new Promise((function(t,n){(0,e.exec)("git diff -U0 --minimal origin/master",(function(e,r){return e?n(e):t(r)}))}))]}))}))]
+case 1:for(t=u.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),i=[],s=1;s<t.length;s+=2)o=t[s],l().isMatch(o,n,{ignore:r})&&(a=t[s+1].split("\n").filter((function(e){return e.startsWith("+")}))).length>0&&i.push({filePath:o,content:a})
+return[2,i]}}))}))}
 var _=__webpack_require__(406),y=__webpack_require__.n(_),v=__webpack_require__(835),g=__webpack_require__.n(v),m=__webpack_require__(211),b=__webpack_require__.n(m),w=__webpack_require__(761),R=__webpack_require__.n(w)
 const x=o().Readable,A=Symbol("buffer"),E=Symbol("type")
 class k{constructor(){this[E]=""
@@ -803,7 +804,7 @@ var we=function(e,t,n){return void 0===n&&(n=function(e){return e[1]}),Array.fro
 return n?n.filter(Boolean).map((function(e){return e.startsWith("/static")?e.slice(7):e})):null
 case".html":return we(t,/href="(.*?)"/gm)
 case".json":return we(t,/"(?:(?:https?:)?\/\/)?(?:)"/gm)
-default:return we(t,/(((https?:\/\/)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/gm,(function(e){return e[0]}))}}
+default:return we(t,/(((https?:\/\/)[A-Za-z0-9.-]+|(?:www\.)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/gm,(function(e){return e[0]}))}}
 const xe=function(e){var t=e.filePath,n=e.content
 return(Array.isArray(n)?[].concat.apply([],n.map((function(e){return Re(t,e)}))):Re(t,n)).filter((function(e){return e&&!e.startsWith("#")}))}
 var Ae=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
