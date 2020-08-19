@@ -799,7 +799,8 @@ case 3:return u=c.sent(),[2,{link:t,href:e,description:["Error",u.code&&" "+u.co
 case 4:return[3,6]
 case 5:return[2,{link:t,description:"Excluded",pass:!0}]
 case 6:return[2]}}))}))}
-var we=function(e,t,n){return void 0===n&&(n=function(e){return e[1]}),Array.from(e.matchAll(t),n)},Re=function(e,t){switch(i().extname(e)){case".md":case".mdx":return we(t,/\[.*?\]\((?:<((?:\(.*?\)|.)*?)>|((?:\(.*?\)|.)*?))(?: ["'].*?["'])?\)/gm,(function(e){return e[2]||e[1]}))
+var we=function(e,t,n){return void 0===n&&(n=function(e){return e[1]}),Array.from(e.matchAll(t),n)},Re=function(e,t){switch(i().extname(e)){case".md":case".mdx":var n=we(t,/\[.*?\]\((?:<((?:\(.*?\)|.)*?)>|((?:\(.*?\)|.)*?))(?: ["'].*?["'])?\)/gm,(function(e){return e[2]||e[1]}))
+return n?n.filter(Boolean).map((function(e){return e.startsWith("/static")?e.slice(7):e})):null
 case".html":return we(t,/href="(.*?)"/gm)
 case".json":return we(t,/"(?:(?:https?:)?\/\/)?(?:)"/gm)
 default:return we(t,/(((https?:\/\/)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/gm,(function(e){return e[0]}))}}
