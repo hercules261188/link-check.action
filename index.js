@@ -917,7 +917,7 @@ throw e}return[2]}}))}))}!function(){Ge(this,void 0,void 0,(function(){var t,n,r
 return Me(this,(function(A){switch(A.label){case 0:return t=new Promise((function(t,n){(0,e.exec)("git fetch origin master",(function(e){return e?n(e):t()}))})),[4,ke(["rootURL","linkIncludePatternFiles","linkIncludePatterns","linkExcludePatternFiles","linkExcludePatterns","fileIncludePatternFiles","fileIncludePatterns","fileExcludePatternFiles","fileExcludePatterns"],Ue)]
 case 1:return n=A.sent(),r=n[0],i=n[1],s=n[2],o=n[3],u=n[4],l=n[5],c=n[6],h=n[7],p=n[8],[4,De([[i,s],[o,u],[l,c],[h,p]])]
 case 2:return d=A.sent(),_=d[0],y=d[1],v=d[2],g=d[3],m={source:"git-diff",rootURL:r,linkIncludePatterns:Ne(_),linkExcludePatterns:y,fileIncludePatterns:Ne(v),fileExcludePatterns:g},[4,t]
-case 3:return A.sent(),[4,f()]
+case 3:return A.sent(),[4,f(m)]
 case 4:return b=A.sent(),[4,Oe(b,m)]
 case 5:return 0===(w=A.sent()).length?(a.setOutput("output",JSON.stringify({summary:"There were no files to check links in."})),a.setOutput("conclusion","success")):(R="# Link check report\n\n"+He(w,{fileFormat:function(e){var t=e.checks,n=e.filePath
 return"* "+(t.some((function(e){return!e.pass}))?":x:":":heavy_check_mark:")+": "+n+"\n"},linkFormat:function(e){var t=e.link,n=e.href,r=e.description
