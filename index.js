@@ -1380,10 +1380,10 @@ return nt(this,(function(n){switch(n.label){case 0:return t=[e],[4,it(e)]
 case 1:return[2,t.concat([n.sent()])]}}))}))}))]
 case 1:return e=a.sent().reduce((function(e,t){var n=t[0],r=t[1]
 return""!==r&&(e[n]=r),e}),{}),t=e.configFile,n=rt(e,["configFile"]),r=et,i=[n],[4,(u=t,Ve(void 0,void 0,void 0,(function(){return We(this,(function(e){return u?[2,JSON.parse(String(h().readFileSync(o().join(process.cwd(),u))))]:[2,{}]}))})))]
-case 2:return[2,r.apply(void 0,[i.concat([a.sent()])])]}var u}))}))}var ot=function(e,t){return e&&e.length>0?e.join(t):void 0},at=function(e){var t=e.success,n=e.conclusion,r=void 0===n?t?"success":"failure":n,i=e.summarySegments,s=e.descriptionSegments,o=e.summary,a=void 0===o?ot(i,", "):o,u=e.description,l=void 0===u?ot(s,"\n\n"):u,h=e.exit,p=void 0===h?t?0:2:h
+case 2:return[2,r.apply(void 0,[i.concat([a.sent()])])]}var u}))}))}var ot=function(e,t){return e&&e.length>0?e.join(t):void 0},at=function(e){var t=e.success,n=e.conclusion,r=void 0===n?t?"success":"failure":n,i=e.summarySegments,s=e.descriptionSegments,o=e.summary,a=void 0===o?ot(i,", "):o,u=e.description,l=void 0===u?ot(s,"\n\n"):u
 c.setOutput("conclusion",r)
-var d=l?{summary:a}:{summary:a,description:l}
-c.setOutput("output",JSON.stringify(d)),process.exit(p)}
+var h=l?{summary:a}:{summary:a,description:l}
+c.setOutput("output",JSON.stringify(h))}
 !function(){tt(this,void 0,void 0,(function(){var e,t,r,i,s,o,a,u,c,l,h
 return nt(this,(function(p){switch(p.label){case 0:return e=new Promise((function(e,t){(0,n.exec)("git fetch origin master",(function(n){return n?t(n):e()}))})),[4,st()]
 case 1:return t=p.sent(),console.log("Options:",t),r=[],i=[],s=t.reportUnusedPatterns,o=t.linkExcludePatterns,[4,e]
