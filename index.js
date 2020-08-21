@@ -1384,11 +1384,11 @@ case 2:return[2,r.apply(void 0,[i.concat([a.sent()])])]}var u}))}))}var ot=funct
 c.setOutput("conclusion",r)
 var h=l?{summary:a}:{summary:a,description:l}
 c.setOutput("output",JSON.stringify(h))}
-!function(){tt(this,void 0,void 0,(function(){var e,t,r,i,s,o,a,u,c,l,h
-return nt(this,(function(p){switch(p.label){case 0:return e=new Promise((function(e,t){(0,n.exec)("git fetch origin master",(function(n){return n?t(n):e()}))})),[4,st()]
-case 1:return t=p.sent(),console.log("Options:",t),r=[],i=[],s=t.reportUnusedPatterns,o=t.linkExcludePatterns,[4,e]
-case 2:return p.sent(),[4,k(t)]
-case 3:return a=p.sent(),[4,Ne(a,t)]
-case 4:return 0===(u=p.sent()).length?[2,at({summary:"There were no files to check links in.",success:!0})]:s&&o&&((c=o.filter((function(e){return!Pe.has(e)}))).length>1?(l=c.map((function(e){return"  - "+e})).join("\n\n"),r.push("Some link patterns were unused"),i.push("# Unused match patterns\n\n"+l)):r.push("All link patterns are used"),"only"===s)?[2,at({summarySegments:r,descriptionSegments:i,success:!1})]:(h=u.some((function(e){return e.checks.some((function(e){return!e.pass}))})),r.push(h?"Some new links failed the check.":"All new links passed the check!"),i.push("# Link check report\n\n"+Ue(u,{fileFormat:function(e){var t=e.checks,n=e.filePath
+!function(){tt(this,void 0,void 0,(function(){var e,t,r,i,s,o,a,u,c,l,h,p
+return nt(this,(function(d){switch(d.label){case 0:return e=new Promise((function(e,t){(0,n.exec)("git fetch origin master",(function(n){return n?t(n):e()}))})),[4,st()]
+case 1:return t=d.sent(),console.log("Options:",t),r=[],i=[],s=t.reportUnusedPatterns,o=t.linkExcludePatterns,[4,e]
+case 2:return d.sent(),[4,k(t)]
+case 3:return a=d.sent(),[4,Ne(a,t)]
+case 4:return 0===(u=d.sent()).length?[2,at({summary:"There were no files to check links in.",success:!0})]:s&&o&&(c=o.filter((function(e){return!Pe.has(e)})),(l=c.length>1)?(h=c.map((function(e){return"  - "+e})).join("\n\n"),r.push("Some link patterns were unused"),i.push("# Unused match patterns\n\n"+h)):r.push("All link patterns are used"),"only"===s)?[2,at({summarySegments:r,descriptionSegments:i,success:!l})]:(p=u.some((function(e){return e.checks.some((function(e){return!e.pass}))})),r.push(p?"Some new links failed the check.":"All new links passed the check!"),i.push("# Link check report\n\n"+Ue(u,{fileFormat:function(e){var t=e.checks,n=e.filePath
 return"* "+(t.some((function(e){return!e.pass}))?":x:":":heavy_check_mark:")+": "+n+"\n"},linkFormat:function(e){var t=e.link,n=e.href,r=e.description
-return"  - "+(e.pass?":heavy_check_mark:":":x:")+" "+t+(n&&n!==t?" = "+n:"")+" ("+r+")"}})),[2,at({summarySegments:r,descriptionSegments:i,success:!h})])}}))}))}()})()})()
+return"  - "+(e.pass?":heavy_check_mark:":":x:")+" "+t+(n&&n!==t?" = "+n:"")+" ("+r+")"}})),[2,at({summarySegments:r,descriptionSegments:i,success:!p})])}}))}))}()})()})()
