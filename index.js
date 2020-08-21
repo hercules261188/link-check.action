@@ -1302,7 +1302,7 @@ case 1:return e.content=u.sent(),[4,De(je(e),(function(e){return Fe(void 0,void 
 return Me(this,(function(n){switch(n.label){case 0:return(t=function(e,t){try{return new URL(/^(https?:\/)?\//.test(e)?e:"https://"+e,t)}catch(e){return null}}(e,i))?[4,Te({link:e,url:t,linkIncludePatterns:s,linkExcludePatterns:o,dryRun:a})]:[2,null]
 case 1:return[2,n.sent()]}}))}))}))]
 case 2:return t=u.sent().filter(Boolean),[2,{filePath:n,checks:t}]}}))}))},Ne=function(e,t){return Fe(void 0,void 0,void 0,(function(){return Me(this,(function(n){switch(n.label){case 0:return[4,De(e,(function(e){return $e(e,t)}))]
-case 1:return[2,n.sent().filter(Boolean)]}}))}))},Be=function(e){var t=e.checks,n=e.filePath
+case 1:return[2,n.sent().filter((function(e){return e.checks.length>0}))]}}))}))},Be=function(e){var t=e.checks,n=e.filePath
 return"* "+(t.some((function(e){return!e.pass}))?"FAIL":"PASS")+": "+n+"\n"},qe=function(e){var t=e.link,n=e.href,r=e.description
 return"  - "+(e.pass?"PASS":"FAIL")+": "+t+(n?" = "+n:"")+" ("+r+")"},Ge=function(e,t){var n=e.filePath,r=e.checks,i=t.fileFormat,s=void 0===i?Be:i,o=t.linkFormat,a=void 0===o?qe:o,u=t.linkSeparator,c=void 0===u?"\n":u
 return r.length>0?s({filePath:n,checks:r})+r.sort((function(e,t){return e.pass===t.pass?0:e.pass?1:-1})).map(a).join(c):null}
