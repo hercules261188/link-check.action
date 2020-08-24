@@ -42,23 +42,22 @@ jobs:
     if: github.event.deployment_status.state == 'success'
 
     steps:
+      - uses: actions/checkout@v2
 
-    - uses: actions/checkout@v2
+      - name: Run the link check script
+        id: check
+        uses: "iterative/link-check.action@master"
+        with:
+          configFile: "./.linkcheckrc.json"
+          rootURL: "${{ github.event.deployment.payload.web_url }}"
 
-    - name: Run the link check script
-      id: check
-      uses: "iterative/link-check.action@master"
-      with:
-        configFile: "./.linkcheckrc.json"
-        rootURL: "${{ github.event.deployment.payload.web_url }}"
-
-    - uses: LouisBrunner/checks-action@v0.1.0
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        name: Link Check Deploy
-        status: completed
-        conclusion: ${{ steps.check.outputs.conclusion }}
-        output: ${{ steps.check.outputs.output }}
+      - uses: LouisBrunner/checks-action@v0.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Link Check Deploy
+          status: completed
+          conclusion: ${{ steps.check.outputs.conclusion }}
+          output: ${{ steps.check.outputs.output }}
 ```
 
 This workflow ensures that all link exclusion patterns are used throughout the repo:
@@ -152,6 +151,20 @@ those stopped by the dry run alone.
 
 If set to "only", applies dryRun and skips report logging after reporting unused patterns.
 If otherwise true, unused link exclusion patterns will be logged to output.
+
+### bottlenecks: Map<string, {minTime: number, maxConcurrent: number}
+
+This object determines overrides for the settings of the Bottleneck instances
+used for each hostname. The keys will be tried as a micromatch pattern against
+each link's hostname, and the object at the first match will have its keys
+override the defaults for that instance.
+
+By default, Bottleneck instances only allow one concurrent connection and at
+least 400ms minimum time between each call per hostname. Sites with more
+aggressive 429 responses may require a larger minTime, but the defaults handle
+the majority of sites well.
+
+This setting can only be defined in an options file.
 
 ## Runners
 
