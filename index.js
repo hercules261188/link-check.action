@@ -376,37 +376,37 @@ const r=n(6339),{MAX_LENGTH:i,CHAR_BACKSLASH:s,CHAR_BACKTICK:o,CHAR_COMMA:a,CHAR
 e.exports=(e,t={})=>{if("string"!=typeof e)throw new TypeError("Expected a string")
 let n=t||{},m="number"==typeof n.maxLength?Math.min(i,n.maxLength):i
 if(e.length>m)throw new SyntaxError(`Input length (${e.length}), exceeds max characters (${m})`)
-let b,w={type:"root",input:e,nodes:[]},S=[w],k=w,x=w,E=0,A=e.length,R=0,O=0
-const P=()=>e[R++],C=e=>{if("text"===e.type&&"dot"===x.type&&(x.type="text"),!x||"text"!==x.type||"text"!==e.type)return k.nodes.push(e),e.parent=k,e.prev=x,x=e,e
+let b,w={type:"root",input:e,nodes:[]},k=[w],S=w,x=w,E=0,A=e.length,R=0,O=0
+const P=()=>e[R++],C=e=>{if("text"===e.type&&"dot"===x.type&&(x.type="text"),!x||"text"!==x.type||"text"!==e.type)return S.nodes.push(e),e.parent=S,e.prev=x,x=e,e
 x.value+=e.value}
-for(C({type:"bos"});R<A;)if(k=S[S.length-1],b=P(),b!==v&&b!==g)if(b!==s)if(b!==f)if(b!==d)if(b!==c)if(b!==l)if(b!==_&&b!==y&&b!==o)if(b!==h)if(b!==p)if(b===a&&O>0){if(k.ranges>0){k.ranges=0
-let e=k.nodes.shift()
-k.nodes=[e,{type:"text",value:r(k)}]}C({type:"comma",value:b}),k.commas++}else if(b===u&&O>0&&0===k.commas){let e=k.nodes
+for(C({type:"bos"});R<A;)if(S=k[k.length-1],b=P(),b!==v&&b!==g)if(b!==s)if(b!==f)if(b!==d)if(b!==c)if(b!==l)if(b!==_&&b!==y&&b!==o)if(b!==h)if(b!==p)if(b===a&&O>0){if(S.ranges>0){S.ranges=0
+let e=S.nodes.shift()
+S.nodes=[e,{type:"text",value:r(S)}]}C({type:"comma",value:b}),S.commas++}else if(b===u&&O>0&&0===S.commas){let e=S.nodes
 if(0===O||0===e.length){C({type:"text",value:b})
-continue}if("dot"===x.type){if(k.range=[],x.value+=b,x.type="range",3!==k.nodes.length&&5!==k.nodes.length){k.invalid=!0,k.ranges=0,x.type="text"
-continue}k.ranges++,k.args=[]
+continue}if("dot"===x.type){if(S.range=[],x.value+=b,x.type="range",3!==S.nodes.length&&5!==S.nodes.length){S.invalid=!0,S.ranges=0,x.type="text"
+continue}S.ranges++,S.args=[]
 continue}if("range"===x.type){e.pop()
 let t=e[e.length-1]
-t.value+=x.value+b,x=t,k.ranges--
+t.value+=x.value+b,x=t,S.ranges--
 continue}C({type:"dot",value:b})}else C({type:"text",value:b})
-else{if("brace"!==k.type){C({type:"text",value:b})
+else{if("brace"!==S.type){C({type:"text",value:b})
 continue}let e="close"
-k=S.pop(),k.close=!0,C({type:e,value:b}),O--,k=S[S.length-1]}else{O++
-let e=x.value&&"$"===x.value.slice(-1)||!0===k.dollar
-k=C({type:"brace",open:!0,close:!1,dollar:e,depth:O,commas:0,ranges:0,nodes:[]}),S.push(k),C({type:"open",value:b})}else{let e,n=b
+S=k.pop(),S.close=!0,C({type:e,value:b}),O--,S=k[k.length-1]}else{O++
+let e=x.value&&"$"===x.value.slice(-1)||!0===S.dollar
+S=C({type:"brace",open:!0,close:!1,dollar:e,depth:O,commas:0,ranges:0,nodes:[]}),k.push(S),C({type:"open",value:b})}else{let e,n=b
 for(!0!==t.keepQuotes&&(b="");R<A&&(e=P());)if(e!==s){if(e===n){!0===t.keepQuotes&&(b+=e)
 break}b+=e}else b+=e+P()
-C({type:"text",value:b})}else{if("paren"!==k.type){C({type:"text",value:b})
-continue}k=S.pop(),C({type:"text",value:b}),k=S[S.length-1]}else k=C({type:"paren",nodes:[]}),S.push(k),C({type:"text",value:b})
+C({type:"text",value:b})}else{if("paren"!==S.type){C({type:"text",value:b})
+continue}S=k.pop(),C({type:"text",value:b}),S=k[k.length-1]}else S=C({type:"paren",nodes:[]}),k.push(S),C({type:"text",value:b})
 else{E++
 let e
 for(;R<A&&(e=P());)if(b+=e,e!==d)if(e!==s){if(e===f&&(E--,0===E))break}else b+=P()
 else E++
 C({type:"text",value:b})}else C({type:"text",value:"\\"+b})
 else C({type:"text",value:(t.keepEscaping?b:"")+P()})
-do{if(k=S.pop(),"root"!==k.type){k.nodes.forEach(e=>{e.nodes||("open"===e.type&&(e.isOpen=!0),"close"===e.type&&(e.isClose=!0),e.nodes||(e.type="text"),e.invalid=!0)})
-let e=S[S.length-1],t=e.nodes.indexOf(k)
-e.nodes.splice(t,1,...k.nodes)}}while(S.length>0)
+do{if(S=k.pop(),"root"!==S.type){S.nodes.forEach(e=>{e.nodes||("open"===e.type&&(e.isOpen=!0),"close"===e.type&&(e.isClose=!0),e.nodes||(e.type="text"),e.invalid=!0)})
+let e=k[k.length-1],t=e.nodes.indexOf(S)
+e.nodes.splice(t,1,...S.nodes)}}while(k.length>0)
 return C({type:"eos"}),w}},6339:(e,t,n)=>{"use strict"
 const r=n(2117)
 e.exports=(e,t={})=>{let n=(e,i={})=>{let s=t.escapeInvalid&&r.isInvalidBrace(i),o=!0===e.invalid&&!0===t.escapeInvalid,a=""
@@ -587,9 +587,9 @@ let o=i>s,a=String(e),f=String(t),_=String(n)
 n=Math.max(Math.abs(n),1)
 let y=u(a)||u(f)||u(_),g=y?Math.max(a.length,f.length,_.length):0,v=!1===y&&!1===((e,t,n)=>"string"==typeof e||"string"==typeof t||!0===n.stringify)(e,t,r),m=r.transform||(e=>t=>!0===e?Number(t):String(t))(v)
 if(r.toRegex&&1===n)return h(l(e,g),l(t,g),!0,r)
-let b={negatives:[],positives:[]},w=[],S=0
-for(;o?i>=s:i<=s;)!0===r.toRegex&&n>1?b[(k=i)<0?"negatives":"positives"].push(Math.abs(k)):w.push(c(m(i,S),g,v)),i=o?i-n:i+n,S++
-var k
+let b={negatives:[],positives:[]},w=[],k=0
+for(;o?i>=s:i<=s;)!0===r.toRegex&&n>1?b[(S=i)<0?"negatives":"positives"].push(Math.abs(S)):w.push(c(m(i,k),g,v)),i=o?i-n:i+n,k++
+var S
 return!0===r.toRegex?n>1?((e,t)=>{e.negatives.sort((e,t)=>e<t?-1:e>t?1:0),e.positives.sort((e,t)=>e<t?-1:e>t?1:0)
 let n,r=t.capture?"":"?:",i="",s=""
 return e.positives.length&&(i=e.positives.join("|")),e.negatives.length&&(s=`-(${r}${e.negatives.join("|")})`),n=i&&s?`${i}|${s}`:i||s,t.wrap?`(${r}${n})`:n})(b,r):p(w,null,{wrap:!1,...r}):w},y=(e,t,n,r={})=>{if(null==t&&o(e))return[e]
@@ -743,7 +743,7 @@ e=c[e]||e
 const n={...t},p="number"==typeof n.maxLength?Math.min(s,n.maxLength):s
 let d=e.length
 if(d>p)throw new SyntaxError(`Input length: ${d}, exceeds maximum allowed length: ${p}`)
-const f={type:"bos",value:"",output:n.prepend||""},_=[f],y=n.capture?"":"?:",g=i.isWindows(t),v=r.globChars(g),m=r.extglobChars(v),{DOT_LITERAL:b,PLUS_LITERAL:w,SLASH_LITERAL:S,ONE_CHAR:k,DOTS_SLASH:x,NO_DOT:E,NO_DOT_SLASH:A,NO_DOTS_SLASH:R,QMARK:O,QMARK_NO_DOT:P,STAR:C,START_ANCHOR:T}=v,j=e=>`(${y}(?:(?!${T}${e.dot?x:b}).)*?)`,L=n.dot?"":E,I=n.dot?O:P
+const f={type:"bos",value:"",output:n.prepend||""},_=[f],y=n.capture?"":"?:",g=i.isWindows(t),v=r.globChars(g),m=r.extglobChars(v),{DOT_LITERAL:b,PLUS_LITERAL:w,SLASH_LITERAL:k,ONE_CHAR:S,DOTS_SLASH:x,NO_DOT:E,NO_DOT_SLASH:A,NO_DOTS_SLASH:R,QMARK:O,QMARK_NO_DOT:P,STAR:C,START_ANCHOR:T}=v,j=e=>`(${y}(?:(?!${T}${e.dot?x:b}).)*?)`,L=n.dot?"":E,I=n.dot?O:P
 let H=!0===n.bash?j(n):C
 n.capture&&(H=`(${H})`),"boolean"==typeof n.noext&&(n.noextglob=n.noext)
 const D={input:e,index:-1,start:0,dot:!0===n.dot,consumed:"",output:"",prefix:"",backtrack:!1,negated:!1,brackets:0,braces:0,parens:0,quotes:0,globstar:!1,tokens:_}
@@ -757,7 +757,7 @@ return e%2!=0&&(D.negated=!0,D.start++,!0)},Q=e=>{D[e]++,$.push(e)},Y=e=>{D[e]--
 e.prev=B,_.push(e),B=e},Z=(e,t)=>{const r={...m[t],conditions:1,inner:""}
 r.prev=B,r.parens=D.parens,r.output=D.output
 const i=(n.capture?"(":"")+r.open
-Q("parens"),X({type:e,value:t,output:D.output?"":k}),X({type:"paren",extglob:!0,value:U(),output:i}),F.push(r)},J=e=>{let t=e.close+(n.capture?")":"")
+Q("parens"),X({type:e,value:t,output:D.output?"":S}),X({type:"paren",extglob:!0,value:U(),output:i}),F.push(r)},J=e=>{let t=e.close+(n.capture?")":"")
 if("negate"===e.type){let r=H
 e.inner&&e.inner.length>1&&e.inner.includes("/")&&(r=j(n)),(r!==H||q()||/^\)+$/.test(K()))&&(t=e.close=")$))"+r),"bos"===e.prev.type&&q()&&(D.negatedExtglob=!0)}X({type:"paren",extglob:!0,value:N,output:t}),Y("parens")}
 if(!1!==n.fastpaths&&!/(^[*!]|[/()[\]{}"])/.test(e)){let r=!1,s=e.replace(u,(e,t,n,i,s,o)=>"\\"===i?(r=!0,e):"?"===i?t?t+i+(s?O.repeat(s.length):""):0===o?I+(s?O.repeat(s.length):""):O.repeat(n.length):"."===i?b.repeat(n.length):"*"===i?t?t+i+(s?H:""):H:t?e:"\\"+e)
@@ -771,7 +771,7 @@ let r=0
 if(t&&t[0].length>2&&(r=t[0].length,D.index+=r,r%2!=0&&(N+="\\")),!0===n.unescape?N=U()||"":N+=U()||"",0===D.brackets){X({type:"text",value:N})
 continue}}if(D.brackets>0&&("]"!==N||"["===B.value||"[^"===B.value)){if(!1!==n.posix&&":"===N){const e=B.value.slice(1)
 if(e.includes("[")&&(B.posix=!0,e.includes(":"))){const e=B.value.lastIndexOf("["),t=B.value.slice(0,e),n=B.value.slice(e+2),r=o[n]
-if(r){B.value=t+r,D.backtrack=!0,U(),f.output||1!==_.indexOf(B)||(f.output=k)
+if(r){B.value=t+r,D.backtrack=!0,U(),f.output||1!==_.indexOf(B)||(f.output=S)
 continue}}}("["===N&&":"!==G()||"-"===N&&"]"===G())&&(N="\\"+N),"]"!==N||"["!==B.value&&"[^"!==B.value||(N="\\"+N),!0===n.posix&&"!"===N&&"["===B.value&&(N="^"),B.value+=N,W({value:N})
 continue}if(1===D.quotes&&'"'!==N){N=i.escapeRegex(N),B.value+=N,W({value:N})
 continue}if('"'===N){D.quotes=1===D.quotes?0:1,!0===n.keepQuotes&&X({type:"text",value:N})
@@ -808,7 +808,7 @@ continue}if(","===N){let e=N
 const t=M[M.length-1]
 t&&"braces"===$[$.length-1]&&(t.comma=!0,e="|"),X({type:"comma",value:N,output:e})
 continue}if("/"===N){if("dot"===B.type&&D.index===D.start+1){D.start=D.index+1,D.consumed="",D.output="",_.pop(),B=f
-continue}X({type:"slash",value:N,output:S})
+continue}X({type:"slash",value:N,output:k})
 continue}if("."===N){if(D.braces>0&&"dot"===B.type){"."===B.value&&(B.output=b)
 const e=M[M.length-1]
 B.type="dots",B.output+=N,B.value+=N,e.dots=!0
@@ -844,29 +844,29 @@ if(n&&"/"!==n)break
 t=t.slice(3),V("/**",3)}if("bos"===r.type&&q()){B.type="globstar",B.value+=N,B.output=j(n),D.output=B.output,D.globstar=!0,V(N)
 continue}if("slash"===r.type&&"bos"!==r.prev.type&&!o&&q()){D.output=D.output.slice(0,-(r.output+B.output).length),r.output="(?:"+r.output,B.type="globstar",B.output=j(n)+(n.strictSlashes?")":"|$)"),B.value+=N,D.globstar=!0,D.output+=r.output+B.output,V(N)
 continue}if("slash"===r.type&&"bos"!==r.prev.type&&"/"===t[0]){const e=void 0!==t[1]?"|$":""
-D.output=D.output.slice(0,-(r.output+B.output).length),r.output="(?:"+r.output,B.type="globstar",B.output=`${j(n)}${S}|${S}${e})`,B.value+=N,D.output+=r.output+B.output,D.globstar=!0,V(N+U()),X({type:"slash",value:"/",output:""})
-continue}if("bos"===r.type&&"/"===t[0]){B.type="globstar",B.value+=N,B.output=`(?:^|${S}|${j(n)}${S})`,D.output=B.output,D.globstar=!0,V(N+U()),X({type:"slash",value:"/",output:""})
+D.output=D.output.slice(0,-(r.output+B.output).length),r.output="(?:"+r.output,B.type="globstar",B.output=`${j(n)}${k}|${k}${e})`,B.value+=N,D.output+=r.output+B.output,D.globstar=!0,V(N+U()),X({type:"slash",value:"/",output:""})
+continue}if("bos"===r.type&&"/"===t[0]){B.type="globstar",B.value+=N,B.output=`(?:^|${k}|${j(n)}${k})`,D.output=B.output,D.globstar=!0,V(N+U()),X({type:"slash",value:"/",output:""})
 continue}D.output=D.output.slice(0,-B.output.length),B.type="globstar",B.output=j(n),B.value+=N,D.output+=B.output,D.globstar=!0,V(N)
 continue}const r={type:"star",value:N,output:H}
-!0!==n.bash?!B||"bracket"!==B.type&&"paren"!==B.type||!0!==n.regex?(D.index!==D.start&&"slash"!==B.type&&"dot"!==B.type||("dot"===B.type?(D.output+=A,B.output+=A):!0===n.dot?(D.output+=R,B.output+=R):(D.output+=L,B.output+=L),"*"!==G()&&(D.output+=k,B.output+=k)),X(r)):(r.output=N,X(r)):(r.output=".*?","bos"!==B.type&&"slash"!==B.type||(r.output=L+r.output),X(r))}for(;D.brackets>0;){if(!0===n.strictBrackets)throw new SyntaxError(h("closing","]"))
+!0!==n.bash?!B||"bracket"!==B.type&&"paren"!==B.type||!0!==n.regex?(D.index!==D.start&&"slash"!==B.type&&"dot"!==B.type||("dot"===B.type?(D.output+=A,B.output+=A):!0===n.dot?(D.output+=R,B.output+=R):(D.output+=L,B.output+=L),"*"!==G()&&(D.output+=S,B.output+=S)),X(r)):(r.output=N,X(r)):(r.output=".*?","bos"!==B.type&&"slash"!==B.type||(r.output=L+r.output),X(r))}for(;D.brackets>0;){if(!0===n.strictBrackets)throw new SyntaxError(h("closing","]"))
 D.output=i.escapeLast(D.output,"["),Y("brackets")}for(;D.parens>0;){if(!0===n.strictBrackets)throw new SyntaxError(h("closing",")"))
 D.output=i.escapeLast(D.output,"("),Y("parens")}for(;D.braces>0;){if(!0===n.strictBrackets)throw new SyntaxError(h("closing","}"))
-D.output=i.escapeLast(D.output,"{"),Y("braces")}if(!0===n.strictSlashes||"star"!==B.type&&"bracket"!==B.type||X({type:"maybe_slash",value:"",output:S+"?"}),!0===D.backtrack){D.output=""
+D.output=i.escapeLast(D.output,"{"),Y("braces")}if(!0===n.strictSlashes||"star"!==B.type&&"bracket"!==B.type||X({type:"maybe_slash",value:"",output:k+"?"}),!0===D.backtrack){D.output=""
 for(const e of D.tokens)D.output+=null!=e.output?e.output:e.value,e.suffix&&(D.output+=e.suffix)}return D}
 p.fastpaths=(e,t)=>{const n={...t},o="number"==typeof n.maxLength?Math.min(s,n.maxLength):s,a=e.length
 if(a>o)throw new SyntaxError(`Input length: ${a}, exceeds maximum allowed length: ${o}`)
 e=c[e]||e
 const u=i.isWindows(t),{DOT_LITERAL:l,SLASH_LITERAL:h,ONE_CHAR:p,DOTS_SLASH:d,NO_DOT:f,NO_DOTS:_,NO_DOTS_SLASH:y,STAR:g,START_ANCHOR:v}=r.globChars(u),m=n.dot?_:f,b=n.dot?y:f,w=n.capture?"":"?:"
-let S=!0===n.bash?".*?":g
-n.capture&&(S=`(${S})`)
-const k=e=>!0===e.noglobstar?S:`(${w}(?:(?!${v}${e.dot?d:l}).)*?)`,x=e=>{switch(e){case"*":return`${m}${p}${S}`
-case".*":return`${l}${p}${S}`
-case"*.*":return`${m}${S}${l}${p}${S}`
-case"*/*":return`${m}${S}${h}${p}${b}${S}`
-case"**":return m+k(n)
-case"**/*":return`(?:${m}${k(n)}${h})?${b}${p}${S}`
-case"**/*.*":return`(?:${m}${k(n)}${h})?${b}${S}${l}${p}${S}`
-case"**/.*":return`(?:${m}${k(n)}${h})?${l}${p}${S}`
+let k=!0===n.bash?".*?":g
+n.capture&&(k=`(${k})`)
+const S=e=>!0===e.noglobstar?k:`(${w}(?:(?!${v}${e.dot?d:l}).)*?)`,x=e=>{switch(e){case"*":return`${m}${p}${k}`
+case".*":return`${l}${p}${k}`
+case"*.*":return`${m}${k}${l}${p}${k}`
+case"*/*":return`${m}${k}${h}${p}${b}${k}`
+case"**":return m+S(n)
+case"**/*":return`(?:${m}${S(n)}${h})?${b}${p}${k}`
+case"**/*.*":return`(?:${m}${S(n)}${h})?${b}${k}${l}${p}${k}`
+case"**/.*":return`(?:${m}${S(n)}${h})?${l}${p}${k}`
 default:{const t=/^(.*?)\.(\w+)$/.exec(e)
 if(!t)return
 const n=x(t[1])
@@ -902,35 +902,35 @@ return e.startsWith("./")&&(e=e.slice(2),c=a.prefix="./"),!1===i.fastpaths||"."!
 return new RegExp(e,n.flags||(n.nocase?"i":""))}catch(e){if(t&&!0===t.debug)throw e
 return/$^/}},u.constants=a,e.exports=u},5142:(e,t,n)=>{"use strict"
 const r=n(3337),{CHAR_ASTERISK:i,CHAR_AT:s,CHAR_BACKWARD_SLASH:o,CHAR_COMMA:a,CHAR_DOT:u,CHAR_EXCLAMATION_MARK:c,CHAR_FORWARD_SLASH:l,CHAR_LEFT_CURLY_BRACE:h,CHAR_LEFT_PARENTHESES:p,CHAR_LEFT_SQUARE_BRACKET:d,CHAR_PLUS:f,CHAR_QUESTION_MARK:_,CHAR_RIGHT_CURLY_BRACE:y,CHAR_RIGHT_PARENTHESES:g,CHAR_RIGHT_SQUARE_BRACKET:v}=n(5448),m=e=>e===l||e===o,b=e=>{!0!==e.isPrefix&&(e.depth=e.isGlobstar?1/0:1)}
-e.exports=(e,t)=>{const n=t||{},w=e.length-1,S=!0===n.parts||!0===n.scanToEnd,k=[],x=[],E=[]
+e.exports=(e,t)=>{const n=t||{},w=e.length-1,k=!0===n.parts||!0===n.scanToEnd,S=[],x=[],E=[]
 let A,R,O=e,P=-1,C=0,T=0,j=!1,L=!1,I=!1,H=!1,D=!1,F=!1,M=!1,$=!1,N=!1,B=0,q={value:"",depth:0,isGlob:!1}
 const G=()=>P>=w,U=()=>(A=R,O.charCodeAt(++P))
 for(;P<w;){let e
-if(R=U(),R!==o){if(!0===F||R===h){for(B++;!0!==G()&&(R=U());)if(R!==o)if(R!==h){if(!0!==F&&R===u&&(R=U())===u){if(j=q.isBrace=!0,I=q.isGlob=!0,N=!0,!0===S)continue
-break}if(!0!==F&&R===a){if(j=q.isBrace=!0,I=q.isGlob=!0,N=!0,!0===S)continue
+if(R=U(),R!==o){if(!0===F||R===h){for(B++;!0!==G()&&(R=U());)if(R!==o)if(R!==h){if(!0!==F&&R===u&&(R=U())===u){if(j=q.isBrace=!0,I=q.isGlob=!0,N=!0,!0===k)continue
+break}if(!0!==F&&R===a){if(j=q.isBrace=!0,I=q.isGlob=!0,N=!0,!0===k)continue
 break}if(R===y&&(B--,0===B)){F=!1,j=q.isBrace=!0,N=!0
 break}}else B++
 else M=q.backslashes=!0,U()
-if(!0===S)continue
-break}if(R!==l){if(!0!==n.noext){if(!0===(R===f||R===s||R===i||R===_||R===c)&&O.charCodeAt(P+1)===p){if(I=q.isGlob=!0,H=q.isExtglob=!0,N=!0,!0===S){for(;!0!==G()&&(R=U());)if(R!==o){if(R===g){I=q.isGlob=!0,N=!0
+if(!0===k)continue
+break}if(R!==l){if(!0!==n.noext){if(!0===(R===f||R===s||R===i||R===_||R===c)&&O.charCodeAt(P+1)===p){if(I=q.isGlob=!0,H=q.isExtglob=!0,N=!0,!0===k){for(;!0!==G()&&(R=U());)if(R!==o){if(R===g){I=q.isGlob=!0,N=!0
 break}}else M=q.backslashes=!0,R=U()
-continue}break}}if(R===i){if(A===i&&(D=q.isGlobstar=!0),I=q.isGlob=!0,N=!0,!0===S)continue
-break}if(R===_){if(I=q.isGlob=!0,N=!0,!0===S)continue
-break}if(R===d)for(;!0!==G()&&(e=U());)if(e!==o){if(e===v){if(L=q.isBracket=!0,I=q.isGlob=!0,N=!0,!0===S)continue
+continue}break}}if(R===i){if(A===i&&(D=q.isGlobstar=!0),I=q.isGlob=!0,N=!0,!0===k)continue
+break}if(R===_){if(I=q.isGlob=!0,N=!0,!0===k)continue
+break}if(R===d)for(;!0!==G()&&(e=U());)if(e!==o){if(e===v){if(L=q.isBracket=!0,I=q.isGlob=!0,N=!0,!0===k)continue
 break}}else M=q.backslashes=!0,U()
-if(!0===n.nonegate||R!==c||P!==C){if(!0!==n.noparen&&R===p){if(I=q.isGlob=!0,!0===S){for(;!0!==G()&&(R=U());)if(R!==p){if(R===g){N=!0
+if(!0===n.nonegate||R!==c||P!==C){if(!0!==n.noparen&&R===p){if(I=q.isGlob=!0,!0===k){for(;!0!==G()&&(R=U());)if(R!==p){if(R===g){N=!0
 break}}else M=q.backslashes=!0,R=U()
-continue}break}if(!0===I){if(N=!0,!0===S)continue
-break}}else $=q.negated=!0,C++}else{if(k.push(P),x.push(q),q={value:"",depth:0,isGlob:!1},!0===N)continue
+continue}break}if(!0===I){if(N=!0,!0===k)continue
+break}}else $=q.negated=!0,C++}else{if(S.push(P),x.push(q),q={value:"",depth:0,isGlob:!1},!0===N)continue
 if(A===u&&P===C+1){C+=2
 continue}T=P+1}}else M=q.backslashes=!0,R=U(),R===h&&(F=!0)}!0===n.noext&&(H=!1,I=!1)
 let K=O,V="",W=""
 C>0&&(V=O.slice(0,C),O=O.slice(C),T-=C),K&&!0===I&&T>0?(K=O.slice(0,T),W=O.slice(T)):!0===I?(K="",W=O):K=O,K&&""!==K&&"/"!==K&&K!==O&&m(K.charCodeAt(K.length-1))&&(K=K.slice(0,-1)),!0===n.unescape&&(W&&(W=r.removeBackslashes(W)),K&&!0===M&&(K=r.removeBackslashes(K)))
 const z={prefix:V,input:e,start:C,base:K,glob:W,isBrace:j,isBracket:L,isGlob:I,isExtglob:H,isGlobstar:D,negated:$}
 if(!0===n.tokens&&(z.maxDepth=0,m(R)||x.push(q),z.tokens=x),!0===n.parts||!0===n.tokens){let t
-for(let r=0;r<k.length;r++){const i=t?t+1:C,s=k[r],o=e.slice(i,s)
+for(let r=0;r<S.length;r++){const i=t?t+1:C,s=S[r],o=e.slice(i,s)
 n.tokens&&(0===r&&0!==C?(x[r].isPrefix=!0,x[r].value=V):x[r].value=o,b(x[r]),z.maxDepth+=x[r].depth),0===r&&""===o||E.push(o),t=s}if(t&&t+1<e.length){const r=e.slice(t+1)
-E.push(r),n.tokens&&(x[x.length-1].value=r,b(x[x.length-1]),z.maxDepth+=x[x.length-1].depth)}z.slashes=k,z.parts=E}return z}},3337:(e,t,n)=>{"use strict"
+E.push(r),n.tokens&&(x[x.length-1].value=r,b(x[x.length-1]),z.maxDepth+=x[x.length-1].depth)}z.slashes=S,z.parts=E}return z}},3337:(e,t,n)=>{"use strict"
 const r=n(5622),i="win32"===process.platform,{REGEX_BACKSLASH:s,REGEX_REMOVE_BACKSLASH:o,REGEX_SPECIAL_CHARS:a,REGEX_SPECIAL_CHARS_GLOBAL:u}=n(5448)
 t.isObject=e=>null!==e&&"object"==typeof e&&!Array.isArray(e),t.hasRegexChars=e=>a.test(e),t.isRegexChar=e=>1===e.length&&t.hasRegexChars(e),t.escapeRegex=e=>e.replace(u,"\\$1"),t.toPosixSlashes=e=>e.replace(s,"/"),t.removeBackslashes=e=>e.replace(o,e=>"\\"===e?"":e),t.supportsLookbehinds=()=>{const e=process.version.slice(1).split(".").map(Number)
 return 3===e.length&&e[0]>=9||8===e[0]&&e[1]>=10},t.isWindows=e=>e&&"boolean"==typeof e.windows?e.windows:!0===i||"\\"===r.sep,t.escapeLast=(e,n,r)=>{const i=e.lastIndexOf(n,r)
@@ -1039,8 +1039,8 @@ const w=function(e){var t=e.fileIncludePatterns,n=e.fileExcludePatterns
 return m(this,void 0,void 0,(function(){var e=this
 return b(this,(function(r){switch(r.label){case 0:return[4,s()(t,{ignore:n})]
 case 1:return[2,r.sent().map((function(t){return{filePath:t,content:function(t){return m(e,void 0,void 0,(function(){return b(this,(function(e){return[2,new Promise((function(e,n){return h().readFile(t,(function(t,r){return t?n(t):e(String(r))}))}))]}))}))}}}))]}}))}))}
-var S=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},k=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+var k=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},S=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1059,8 +1059,8 @@ break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
 return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}}
-const x=function(e){return S(this,void 0,void 0,(function(){var t
-return k(this,(function(n){switch(t=e.source){case void 0:case"git-diff":return[2,v(e)]
+const x=function(e){return k(this,void 0,void 0,(function(){var t
+return S(this,(function(n){switch(t=e.source){case void 0:case"git-diff":return[2,v(e)]
 case"filesystem":return[2,w(e)]
 default:throw new Error('link-check was provided unexpected source "'+t+'"!')}return[2]}))}))}
 var E=__webpack_require__(5406),A=__webpack_require__.n(E),R=__webpack_require__(8835),O=__webpack_require__.n(R),P=__webpack_require__(7211),C=__webpack_require__.n(P),T=__webpack_require__(8761),j=__webpack_require__.n(T)
@@ -1208,7 +1208,7 @@ null===n?e.end():U(n)?n.stream().pipe(e):Buffer.isBuffer(n)?(e.write(n),e.end())
 const me=ve
 var be=function(){return(be=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
 return e}).apply(this,arguments)},we=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},Se=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},ke=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1226,20 +1226,20 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},ke=function(e,t){var n={}
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},Se=function(e,t){var n={}
 for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r])
 if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0
 for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},xe={},Ee=function(e,t){if(!xe[e]){var n=Object.entries(t.bottlenecks).find((function(t){var n=t[0]
 return d().isMatch(e,n)})),r=n?n[1]:{},i=r.minTime,s=void 0===i?400:i,o=r.maxConcurrent,a=void 0===o?1:o
-xe[e]=new(A())({minTime:s,maxConcurrent:a})}return xe[e]},Ae=function(e,t,n){return we(void 0,void 0,void 0,(function(){return Se(this,(function(r){return[2,Ee(e.hostname,n).schedule((function(){return me(e.href,t)}))]}))}))},Re=function(e,t,n){return void 0===t&&(t={}),we(void 0,void 0,void 0,(function(){var r,i,s
-return Se(this,(function(o){switch(o.label){case 0:return[4,Ae(e,be(be({},t),{method:"HEAD"}),n)]
+xe[e]=new(A())({minTime:s,maxConcurrent:a})}return xe[e]},Ae=function(e,t,n){return we(void 0,void 0,void 0,(function(){return ke(this,(function(r){return[2,Ee(e.hostname,n).schedule((function(){return me(e.href,t)}))]}))}))},Re=function(e,t,n){return void 0===t&&(t={}),we(void 0,void 0,void 0,(function(){var r,i,s
+return ke(this,(function(o){switch(o.label){case 0:return[4,Ae(e,be(be({},t),{method:"HEAD"}),n)]
 case 1:return 405===(r=o.sent()).status?[2,Ae(e,be(be({},t),{method:"GET"}),n)]:429===r.status&&(i=r.headers.get("retry-after"))?(s=1e3*Number(i),[2,new Promise((function(r){setTimeout((function(){return we(void 0,void 0,void 0,(function(){var i
-return Se(this,(function(s){switch(s.label){case 0:return i=r,[4,Re(e,t,n)]
+return ke(this,(function(s){switch(s.label){case 0:return i=r,[4,Re(e,t,n)]
 case 1:return i.apply(void 0,[s.sent()]),[2]}}))}))}),s)}))]):[2,r]}}))}))},Oe={},Pe=function(e,t){return we(void 0,void 0,void 0,(function(){var n,r
-return Se(this,(function(i){return n=e.href,(r=Oe[n])?[2,r]:(Oe[n]=Re(e,{},t),[2,Oe[n]])}))}))},Ce=new Set
+return ke(this,(function(i){return n=e.href,(r=Oe[n])?[2,r]:(Oe[n]=Re(e,{},t),[2,Oe[n]])}))}))},Ce=new Set
 const Te=function(e,t){var n=e.link,r=e.url
 return we(void 0,void 0,void 0,(function(){var e,i,s,o,a,u,c,l
-return Se(this,(function(h){switch(h.label){case 0:if(e=t.linkIncludePatterns,i=t.linkExcludePatterns,s=t.dryRun,!function(e,t,n){var r=n.ignore,i=ke(n,["ignore"])
+return ke(this,(function(h){switch(h.label){case 0:if(e=t.linkIncludePatterns,i=t.linkExcludePatterns,s=t.dryRun,!function(e,t,n){var r=n.ignore,i=Se(n,["ignore"])
 if(d().isMatch(e,t,i)){if(r)if(Array.isArray(r)){var s=r.find((function(t){return d().isMatch(e,t,i)}))
 if(s)return Ce.add(s),!1}else if(d().isMatch(e,r,i))return Ce.add(r),!1
 return!0}return!1}(n,e,{ignore:i,bash:!0}))return[3,5]
@@ -1299,36 +1299,38 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},Ne=function(e,t){var n=e.filePath,r=e.content
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},Ne=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
+var r=Array(e),i=0
+for(t=0;t<n;t++)for(var s=arguments[t],o=0,a=s.length;o<a;o++,i++)r[i]=s[o]
+return r},Be=function(e,t){var n=e.filePath,r=e.content
 return Me(void 0,void 0,void 0,(function(){var e,i,s
 return $e(this,(function(o){switch(o.label){case 0:return e=t.rootURL,s={filePath:n},[4,"function"==typeof r?r(n):r]
 case 1:return s.content=o.sent(),[4,Fe(Ie(s),(function(n){return Me(void 0,void 0,void 0,(function(){var r
 return $e(this,(function(i){switch(i.label){case 0:return(r=function(e,t){try{return new URL(/^(https?:\/)?\//.test(e)?e:"https://"+e,t)}catch(e){return null}}(n,e))?[4,Te({link:n,url:r},t)]:[2,null]
 case 1:return[2,i.sent()]}}))}))}))]
 case 2:return i=o.sent().filter(Boolean),[2,{filePath:n,checks:i}]}}))}))}
-function Be(e,t){return Me(this,void 0,void 0,(function(){var n,r,i,s
-return $e(this,(function(o){switch(o.label){case 0:return[4,Fe(e,(function(e){return Ne(e,t)}))]
-case 1:return n=o.sent(),r=n.reduce((function(e,t){var n=e[0],r=e[1],i=t.checks
-return[n+i.length,r+i.filter((function(e){return!e.pass})).length]}),[0,0]),i=r[0],s=r[1],[2,{totalChecks:i,failedChecks:s,entries:n,unusedPatterns:(a=t.linkExcludePatterns,a?a.filter((function(e){return!Ce.has(e)})):[])}]}var a}))}))}const qe=function(e,t,n){var r=t.output,i=Array.isArray(r)?r:[r]
+function qe(e,t){return Me(this,void 0,void 0,(function(){var n,r,i,s,o
+return $e(this,(function(a){switch(a.label){case 0:return[4,Fe(e,(function(e){return Be(e,t)}))]
+case 1:return n=a.sent(),r=n.reduce((function(e,t){var n=e[0],r=e[1],i=e[2],s=t.filePath,o=t.checks,a=o.filter((function(e){return!e.pass}))
+return[n+o.length,r+a.length,a.length>0?Ne(i,[{filePath:s,checks:a}]):i]}),[0,0,[]]),i=r[0],s=r[1],o=r[2],[2,{entries:n,failedEntries:o,totalChecksCount:i,failedChecksCount:s,unusedPatterns:(u=t.linkExcludePatterns,u?u.filter((function(e){return!Ce.has(e)})):[])}]}var u}))}))}const Ge=function(e,t,n){var r=t.output,i=Array.isArray(r)?r:[r]
 e.forEach((function(e){var r=e.name,s=e.reporter
 i.includes(r)&&s(n,t)}))}
-var Ge=function(e){var t=e.checks,n=e.filePath
-return"* "+(t.some((function(e){return!e.pass}))?"FAIL":"PASS")+": "+n+"\n"},Ue=function(e){var t=e.link,n=e.href,r=e.description
-return"  - "+(e.pass?"PASS":"FAIL")+": "+t+(n?" = "+n:"")+" ("+r+")"},Ke=function(e,t){var n=e.filePath,r=e.checks,i=t.fileFormat,s=void 0===i?Ge:i,o=t.linkFormat,a=void 0===o?Ue:o,u=t.linkSeparator,c=void 0===u?"\n":u
+var Ue=function(e){var t=e.checks,n=e.filePath
+return"* "+(t.some((function(e){return!e.pass}))?"FAIL":"PASS")+": "+n+"\n"},Ke=function(e){var t=e.link,n=e.href,r=e.description
+return"  - "+(e.pass?"PASS":"FAIL")+": "+t+(n?" = "+n:"")+" ("+r+")"},Ve=function(e,t){var n=e.filePath,r=e.checks,i=t.fileFormat,s=void 0===i?Ue:i,o=t.linkFormat,a=void 0===o?Ke:o,u=t.linkSeparator,c=void 0===u?"\n":u
 return r.length>0?s({filePath:n,checks:r})+r.sort((function(e,t){return e.pass===t.pass?0:e.pass?1:-1})).map(a).join(c):null}
-const Ve=function(e,t){void 0===t&&(t={})
-var n=t.entryFormat,r=void 0===n?Ke:n,i=t.entrySeparator,s=void 0===i?"\n\n":i
+const We=function(e,t){void 0===t&&(t={})
+var n=t.entryFormat,r=void 0===n?Ve:n,i=t.entrySeparator,s=void 0===i?"\n\n":i
 return e.map((function(e,n){return r(e,t,n)})).filter(Boolean).join(s)}
-function We(e){console.log(e.join("\n\n"))}var ze=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
-var r=Array(e),i=0
-for(t=0;t<n;t++)for(var s=arguments[t],o=0,a=s.length;o<a;o++,i++)r[i]=s[o]
-return r},Qe=function(e,t){return e&&e.length>0?e.join(t):void 0}
-function Ye(t){var n=t.success,r=t.conclusion,i=void 0===r?n?"success":"failure":r,s=t.summarySegments,o=t.descriptionSegments,a=t.summary,u=void 0===a?Qe(s,", "):a,c=t.description,l=void 0===c?Qe(o,"\n\n"):c
+function ze(e,t){return void 0===t&&(t="\n\n"),e&&e.length>0?e.filter(Boolean).join(t):void 0}function Qe(e){console.log(ze(e))}function Ye(t){var n=t.success,r=t.conclusion,i=void 0===r?n?"success":"failure":r,s=t.summarySegments,o=t.descriptionSegments,a=t.summary,u=void 0===a?ze(s,", "):a,c=t.description,l=void 0===c?ze(o,"\n\n"):c
 e.setOutput("conclusion",i)
 var h={summary:u}
-l&&(h.text_description=l),e.setOutput("output",JSON.stringify(h))}var Xe=function(){return(Xe=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
-return e}).apply(this,arguments)},Ze=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},Je=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+l&&(h.text_description=l),e.setOutput("output",JSON.stringify(h))}var Xe=function(e){var t=e.link,n=e.href,r=e.description
+return"  - "+(e.pass?":heavy_check_mark:":":x:")+" "+t+(n&&n!==t?" = "+n:"")+" ("+r+")"},Ze=function(e){var t=e.link,n=e.href
+return"  - "+t+(n&&n!==t?" = "+n:"")+" ("+e.description+")"},Je=function(e){return"* "+e.filePath+"\n"}
+var et=function(){return(et=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
+return e}).apply(this,arguments)},tt=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},nt=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1346,27 +1348,27 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},et=function(e,t){var n={}
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},rt=function(e,t){var n={}
 for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r])
 if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0
-for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},tt=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
+for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},it=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
 var r=Array(e),i=0
 for(t=0;t<n;t++)for(var s=arguments[t],o=0,a=s.length;o<a;o++,i++)r[i]=s[o]
-return r},nt=function(e){if(e){if(!Array.isArray(e))return e
+return r},st=function(e){if(e){if(!Array.isArray(e))return e
 if(e.length>0)return e}return"**"}
-function rt(e){return Ze(this,void 0,void 0,(function(){return Je(this,(function(t){return[2,new Promise((function(t,n){return h().readFile(e,(function(e,r){return e?n(e):t(String(r).split(/\n+/))}))}))]}))}))}function it(e){return Ze(this,void 0,void 0,(function(){var t,n,r,i,s
-return Je(this,(function(o){switch(o.label){case 0:return e?Array.isArray(e)?(r=(n=(s=[]).concat).apply,i=[s],[4,Fe(e,rt)]):[3,2]:[2,[]]
+function ot(e){return tt(this,void 0,void 0,(function(){return nt(this,(function(t){return[2,new Promise((function(t,n){return h().readFile(e,(function(e,r){return e?n(e):t(String(r).split(/\n+/))}))}))]}))}))}function at(e){return tt(this,void 0,void 0,(function(){var t,n,r,i,s
+return nt(this,(function(o){switch(o.label){case 0:return e?Array.isArray(e)?(r=(n=(s=[]).concat).apply,i=[s],[4,Fe(e,ot)]):[3,2]:[2,[]]
 case 1:return t=r.apply(n,i.concat([o.sent()])),[3,3]
-case 2:t=rt(e),o.label=3
-case 3:return[2,t]}}))}))}function st(e){return Ze(this,void 0,void 0,(function(){var t=this
-return Je(this,(function(n){return[2,Fe(e,(function(e){var n=e[0],r=e[1]
-return Ze(t,void 0,void 0,(function(){var e
-return Je(this,(function(t){switch(t.label){case 0:return[4,it(n)]
-case 1:return e=t.sent(),[2,(r?e.concat(r):e).filter(Boolean)]}}))}))}))]}))}))}function ot(e){return Ze(this,void 0,void 0,(function(){var t,r,i,s,o,a,u,c,l,h,p,d,f,_,y,g,v,m,b,w,S
-return Je(this,(function(k){switch(k.label){case 0:return t=n().apply(void 0,tt([{}],e.filter(Boolean))),r=t.fileIncludePatterns,i=t.fileExcludePatterns,s=t.fileIncludePatternFiles,o=t.fileExcludePatternFiles,a=t.linkIncludePatterns,u=t.linkExcludePatterns,c=t.linkIncludePatternFiles,l=t.linkExcludePatternFiles,h=t.reportUnusedPatterns,p=t.dryRun,d=void 0===p?"only"===h:p,f=t.bottlenecks,_=void 0===f?{}:f,y=t.output,g=et(t,["fileIncludePatterns","fileExcludePatterns","fileIncludePatternFiles","fileExcludePatternFiles","linkIncludePatterns","linkExcludePatterns","linkIncludePatternFiles","linkExcludePatternFiles","reportUnusedPatterns","dryRun","bottlenecks","output"]),[4,st([[c,a],[l,u],[s,r],[o,i]])]
-case 1:return v=k.sent(),m=v[0],b=v[1],w=v[2],S=v[3],[2,Xe(Xe({},g),{bottlenecks:_,reportUnusedPatterns:h,dryRun:d,output:y&&(Array.isArray(y)?y:[y]),linkIncludePatterns:nt(m),linkExcludePatterns:b,fileIncludePatterns:nt(w),fileExcludePatterns:S})]}}))}))}var at=function(){return(at=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
-return e}).apply(this,arguments)},ut=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},ct=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+case 2:t=ot(e),o.label=3
+case 3:return[2,t]}}))}))}function ut(e){return tt(this,void 0,void 0,(function(){var t=this
+return nt(this,(function(n){return[2,Fe(e,(function(e){var n=e[0],r=e[1]
+return tt(t,void 0,void 0,(function(){var e
+return nt(this,(function(t){switch(t.label){case 0:return[4,at(n)]
+case 1:return e=t.sent(),[2,(r?e.concat(r):e).filter(Boolean)]}}))}))}))]}))}))}function ct(e){return tt(this,void 0,void 0,(function(){var t,r,i,s,o,a,u,c,l,h,p,d,f,_,y,g,v,m,b,w,k,S,x
+return nt(this,(function(E){switch(E.label){case 0:return t=n().apply(void 0,it([{}],e.filter(Boolean))),r=t.fileIncludePatterns,i=t.fileExcludePatterns,s=t.fileIncludePatternFiles,o=t.fileExcludePatternFiles,a=t.linkIncludePatterns,u=t.linkExcludePatterns,c=t.linkIncludePatternFiles,l=t.linkExcludePatternFiles,h=t.reportUnusedPatterns,p=t.dryRun,d=void 0===p?"only"===h:p,f=t.failOnUnusedPatterns,_=void 0===f?"only"===h:f,y=t.bottlenecks,g=void 0===y?{}:y,v=t.output,m=rt(t,["fileIncludePatterns","fileExcludePatterns","fileIncludePatternFiles","fileExcludePatternFiles","linkIncludePatterns","linkExcludePatterns","linkIncludePatternFiles","linkExcludePatternFiles","reportUnusedPatterns","dryRun","failOnUnusedPatterns","bottlenecks","output"]),[4,ut([[c,a],[l,u],[s,r],[o,i]])]
+case 1:return b=E.sent(),w=b[0],k=b[1],S=b[2],x=b[3],[2,et(et({},m),{bottlenecks:g,reportUnusedPatterns:h,dryRun:d,output:v&&(Array.isArray(v)?v:[v]),failOnUnusedPatterns:_,linkIncludePatterns:st(w),linkExcludePatterns:k,fileIncludePatterns:st(S),fileExcludePatterns:x})]}}))}))}var lt=function(){return(lt=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
+return e}).apply(this,arguments)},ht=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},pt=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1384,34 +1386,31 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},lt=function(e,t){var n={}
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},dt=function(e,t){var n={}
 for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r])
 if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0
-for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},ht=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
+for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},ft=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
 var r=Array(e),i=0
 for(t=0;t<n;t++)for(var s=arguments[t],o=0,a=s.length;o<a;o++,i++)r[i]=s[o]
-return r},pt=[{name:"checkAction",reporter:function(e,t){var n=e.totalChecks,r=e.failedChecks,i=e.entries,s=e.unusedPatterns,o=t.reportUnusedPatterns,a=[],u=[]
+return r},_t=[{name:"checkAction",reporter:function(e,t){var n=e.totalChecksCount,r=e.failedChecksCount,i=e.entries,s=e.failedEntries,o=e.unusedPatterns,a=t.reportUnusedPatterns,u=t.failsOnly,c=[],l=[],h=u?s:i,p=u?Ze:Xe
 if(0===n)return Ye({summary:"There were no files to check links in.",success:!0})
 if(0===r)return Ye({summary:"All links passed the check!",success:!0})
-if(o&&s.length>0){var c=s.map((function(e){return"  - "+e})).join("\n\n")
-if(a.push("Some link patterns were unused"),u.push("# Unused match patterns\n\n"+c),"only"===o)return Ye({summarySegments:a,descriptionSegments:u,success:!1})}var l=r>0
-if(l){var h=function(e){return e.reduce((function(e,t){var n=t.filePath,r=t.checks.filter((function(e){return!e.pass}))
-return r.length>0?ze(e,[{filePath:n,checks:r}]):e}),[])}(i)
-a.push("Some new links failed the check."),u.push("# Failed checks\n\n"+Ve(h,{fileFormat:function(e){return"* "+e.filePath+"\n"},linkFormat:function(e){var t=e.link,n=e.href
-return"  - "+t+(n&&n!==t?" = "+n:"")+" ("+e.description+")"}}))}else a.push("All new links passed the check!")
-return Ye({summarySegments:a,descriptionSegments:u,success:!l})}},{name:"consoleLog",reporter:function(e,t){var n=t.reportUnusedPatterns,r=e.totalChecks,i=e.failedChecks,s=e.entries,o=e.unusedPatterns,a=[]
-if(0===r)a.push("There were no links to check!")
-else{var u=Ve(s)
-if(n&&(o.length>0?a.push("Some link ignore patterns were unused!\n\n"+o.join("\n")+"\n"):a.push("All link patterns were used."),"only"===n))return We(a)
-i>0?a.push(u+"\n\n"+i+" links failed."):a.push(u+"\n\nAll links passed!")}return We(a)}},{name:"exitCode",reporter:function(e,t){var n=t.failOnUnusedPatterns,r=t.reportUnusedPatterns,i=e.unusedPatterns,s=e.failedChecks;(n||"only"===r)&&i.length>0&&process.exit(3),s>0&&process.exit(2),process.exit(0)}}]
-function dt(){return ut(this,void 0,void 0,(function(){var t,n,r,i,s,o,u
-return ct(this,(function(c){switch(c.label){case 0:return t=Object.fromEntries(["source","configFile","rootURL","dryRun","reportUnusedPatterns","linkIncludePatternFiles","linkIncludePatterns","linkExcludePatternFiles","linkExcludePatterns","fileIncludePatternFiles","fileIncludePatterns","fileExcludePatternFiles","fileExcludePatterns","output"].reduce((function(t,n){var r=function(t){var n=e.getInput(t)
+if(a&&o.length>0){var d=o.map((function(e){return"  - "+e})).join("\n\n")
+if(c.push("Some link patterns were unused"),l.push("# Unused link exclusion patterns",d),"only"===a)return Ye({summarySegments:c,descriptionSegments:l,success:!1})}var f=r>0,_=u?"# Failed Link Checks":"# Link Checks"
+return f?(c.push("Some new links failed the check."),l.push(_,We(h,{linkFormat:p,fileFormat:Je}))):(c.push("All new links passed the check!"),u||l.push(_,We(h,{linkFormat:p,fileFormat:Je}))),Ye({summarySegments:c,descriptionSegments:l,success:!f})}},{name:"consoleLog",reporter:function(e,t){var n=t.reportUnusedPatterns,r=t.failsOnly,i=e.totalChecksCount,s=e.failedChecksCount,o=e.entries,a=e.failedEntries,u=e.unusedPatterns,c=[],l=r?a:o
+if(0===i)c.push("There were no links to check!")
+else{var h=We(l)
+if(n&&(u.length>0?c.push("Some link ignore patterns were unused!\n\n"+u.join("\n")+"\n"):c.push("All link patterns were used."),"only"===n))return Qe(c)
+c.push(h),s>0?c.push(s+"/"+i+" links failed."):c.push("All "+i+" links passed!")}return Qe(c)}},{name:"exitCode",reporter:function(e,t){var n=t.failOnUnusedPatterns,r=e.unusedPatterns,i=e.failedChecksCount
+n&&r.length>0&&process.exit(2),i>0&&process.exit(2),process.exit(0)}}]
+function yt(){return ht(this,void 0,void 0,(function(){var t,n,r,i,s,o,u,c,l
+return pt(this,(function(p){switch(p.label){case 0:return t=Object.fromEntries(["source","configFile","rootURL","dryRun","reportUnusedPatterns","linkIncludePatternFiles","linkIncludePatterns","linkExcludePatternFiles","linkExcludePatterns","fileIncludePatternFiles","fileIncludePatterns","fileExcludePatternFiles","fileExcludePatterns","output","failsOnly"].reduce((function(t,n){var r=function(t){var n=e.getInput(t)
 try{return JSON.parse(n)}catch(e){if(e instanceof SyntaxError)return n
 throw e}}(n)
-return""===r?t:ht(t,[[n,r]])}),[])),n=t.configFile,r=t.output,i=void 0===r?["consoleLog","exitCode"]:r,s=lt(t,["configFile","output"]),o=ot,u=[at(at({},s),{output:i})],[4,(l=n,Ze(void 0,void 0,void 0,(function(){return Je(this,(function(e){return l?[2,JSON.parse(String(h().readFileSync(a().join(process.cwd(),l))))]:[2,{}]}))})))]
-case 1:return[2,o.apply(void 0,[u.concat([c.sent()])])]}var l}))}))}!function(){ut(this,void 0,void 0,(function(){var e,t,n
-return ct(this,(function(i){switch(i.label){case 0:return e=new Promise((function(e,t){(0,r.exec)("git fetch origin master",(function(n){return n?t(n):e()}))})),[4,dt()]
+return""===r?t:ft(t,[[n,r]])}),[])),n=t.configFile,r=t.output,i=void 0===r?["consoleLog","exitCode"]:r,s=t.failsOnly,o=void 0===s||s,u=dt(t,["configFile","output","failsOnly"]),c=ct,l=[lt(lt({},u),{output:i,failsOnly:o})],[4,(d=n,tt(void 0,void 0,void 0,(function(){return nt(this,(function(e){return d?[2,JSON.parse(String(h().readFileSync(a().join(process.cwd(),d))))]:[2,{}]}))})))]
+case 1:return[2,c.apply(void 0,[l.concat([p.sent()])])]}var d}))}))}!function(){ht(this,void 0,void 0,(function(){var e,t,n
+return pt(this,(function(i){switch(i.label){case 0:return e=new Promise((function(e,t){(0,r.exec)("git fetch origin master",(function(n){return n?t(n):e()}))})),[4,yt()]
 case 1:return t=i.sent(),console.log("Options:",t),[4,e]
 case 2:return i.sent(),[4,x(t)]
-case 3:return[4,Be(i.sent(),t)]
-case 4:return n=i.sent(),qe(pt,t,n),[2]}}))}))}()})()})()
+case 3:return[4,qe(i.sent(),t)]
+case 4:return n=i.sent(),Ge(_t,t,n),[2]}}))}))}()})()})()
