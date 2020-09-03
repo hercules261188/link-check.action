@@ -990,8 +990,8 @@ function __webpack_require__(e){if(__webpack_module_cache__[e])return __webpack_
 var t=__webpack_module_cache__[e]={id:e,loaded:!1,exports:{}}
 return __webpack_modules__[e].call(t.exports,t,t.exports,__webpack_require__),t.loaded=!0,t.exports}__webpack_require__.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e
 return __webpack_require__.d(t,{a:t}),t},__webpack_require__.d=(e,t)=>{for(var n in t)__webpack_require__.o(t,n)&&!__webpack_require__.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},__webpack_require__.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),__webpack_require__.nmd=e=>(e.paths=[],e.children||(e.children=[]),e),(()=>{"use strict"
-var e=__webpack_require__(236),t=__webpack_require__.n(e),n=__webpack_require__(516),r=__webpack_require__.n(n),i=__webpack_require__(3129),s=__webpack_require__(812),o=__webpack_require__.n(s),a=__webpack_require__(5622),u=__webpack_require__.n(a),c=__webpack_require__(2413),l=__webpack_require__.n(c),h=__webpack_require__(5747),p=__webpack_require__.n(h),d=__webpack_require__(8751),f=__webpack_require__.n(d),_=__webpack_require__(8605),y=__webpack_require__.n(_),g=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},v=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+var e=__webpack_require__(516),t=__webpack_require__(236),n=__webpack_require__.n(t),r=__webpack_require__(3129),i=__webpack_require__(812),s=__webpack_require__.n(i),o=__webpack_require__(5622),a=__webpack_require__.n(o),u=__webpack_require__(2413),c=__webpack_require__.n(u),l=__webpack_require__(5747),h=__webpack_require__.n(l),p=__webpack_require__(8751),d=__webpack_require__.n(p),f=__webpack_require__(8605),_=__webpack_require__.n(f),y=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},g=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1010,13 +1010,13 @@ break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
 return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}}
-const m=function(e){var t=e.fileIncludePatterns,n=e.fileExcludePatterns
-return g(void 0,void 0,void 0,(function(){var e,r,s,o,a
-return v(this,(function(u){switch(u.label){case 0:return[4,g(void 0,void 0,void 0,(function(){return v(this,(function(e){return[2,new Promise((function(e,t){(0,i.exec)("git diff -U0 --minimal origin/master",(function(n,r){return n?t(n):e(r)}))}))]}))}))]
-case 1:for(e=u.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),r=[],s=1;s<e.length;s+=2)o=e[s],f().isMatch(o,t,{ignore:n})&&(a=e[s+1].split("\n").filter((function(e){return e.startsWith("+")}))).length>0&&r.push({filePath:o,content:a})
-return[2,r]}}))}))}
-var b=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},w=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+const v=function(e){var t=e.fileIncludePatterns,n=e.fileExcludePatterns
+return y(void 0,void 0,void 0,(function(){var e,i,s,o,a
+return g(this,(function(u){switch(u.label){case 0:return[4,y(void 0,void 0,void 0,(function(){return g(this,(function(e){return[2,new Promise((function(e,t){(0,r.exec)("git diff -U0 --minimal origin/master",(function(n,r){return n?t(n):e(r)}))}))]}))}))]
+case 1:for(e=u.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),i=[],s=1;s<e.length;s+=2)o=e[s],d().isMatch(o,t,{ignore:n})&&(a=e[s+1].split("\n").filter((function(e){return e.startsWith("+")}))).length>0&&i.push({filePath:o,content:a})
+return[2,i]}}))}))}
+var m=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},b=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1035,12 +1035,12 @@ break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
 return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}}
-const S=function(e){var t=e.fileIncludePatterns,n=e.fileExcludePatterns
-return b(this,void 0,void 0,(function(){var e=this
-return w(this,(function(r){switch(r.label){case 0:return[4,o()(t,{ignore:n})]
-case 1:return[2,r.sent().map((function(t){return{filePath:t,content:function(t){return b(e,void 0,void 0,(function(){return w(this,(function(e){return[2,new Promise((function(e,n){return p().readFile(t,(function(t,r){return t?n(t):e(String(r))}))}))]}))}))}}}))]}}))}))}
-var k=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},x=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+const w=function(e){var t=e.fileIncludePatterns,n=e.fileExcludePatterns
+return m(this,void 0,void 0,(function(){var e=this
+return b(this,(function(r){switch(r.label){case 0:return[4,s()(t,{ignore:n})]
+case 1:return[2,r.sent().map((function(t){return{filePath:t,content:function(t){return m(e,void 0,void 0,(function(){return b(this,(function(e){return[2,new Promise((function(e,n){return h().readFile(t,(function(t,r){return t?n(t):e(String(r))}))}))]}))}))}}}))]}}))}))}
+var S=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},k=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1059,53 +1059,53 @@ break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
 return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}}
-const E=function(e){return k(this,void 0,void 0,(function(){var t
-return x(this,(function(n){switch(t=e.source){case void 0:case"git-diff":return[2,m(e)]
-case"filesystem":return[2,S(e)]
+const x=function(e){return S(this,void 0,void 0,(function(){var t
+return k(this,(function(n){switch(t=e.source){case void 0:case"git-diff":return[2,v(e)]
+case"filesystem":return[2,w(e)]
 default:throw new Error('link-check was provided unexpected source "'+t+'"!')}return[2]}))}))}
-var A=__webpack_require__(5406),R=__webpack_require__.n(A),O=__webpack_require__(8835),P=__webpack_require__.n(O),C=__webpack_require__(7211),T=__webpack_require__.n(C),j=__webpack_require__(8761),L=__webpack_require__.n(j)
-const I=l().Readable,H=Symbol("buffer"),D=Symbol("type")
-class F{constructor(){this[D]=""
+var E=__webpack_require__(5406),A=__webpack_require__.n(E),R=__webpack_require__(8835),O=__webpack_require__.n(R),P=__webpack_require__(7211),C=__webpack_require__.n(P),T=__webpack_require__(8761),j=__webpack_require__.n(T)
+const L=c().Readable,I=Symbol("buffer"),H=Symbol("type")
+class D{constructor(){this[H]=""
 const e=arguments[0],t=arguments[1],n=[]
 let r=0
 if(e){const t=e,i=Number(t.length)
 for(let e=0;e<i;e++){const i=t[e]
 let s
-s=i instanceof Buffer?i:ArrayBuffer.isView(i)?Buffer.from(i.buffer,i.byteOffset,i.byteLength):i instanceof ArrayBuffer?Buffer.from(i):i instanceof F?i[H]:Buffer.from("string"==typeof i?i:String(i)),r+=s.length,n.push(s)}}this[H]=Buffer.concat(n)
+s=i instanceof Buffer?i:ArrayBuffer.isView(i)?Buffer.from(i.buffer,i.byteOffset,i.byteLength):i instanceof ArrayBuffer?Buffer.from(i):i instanceof D?i[I]:Buffer.from("string"==typeof i?i:String(i)),r+=s.length,n.push(s)}}this[I]=Buffer.concat(n)
 let i=t&&void 0!==t.type&&String(t.type).toLowerCase()
-i&&!/[^\u0020-\u007E]/.test(i)&&(this[D]=i)}get size(){return this[H].length}get type(){return this[D]}text(){return Promise.resolve(this[H].toString())}arrayBuffer(){const e=this[H],t=e.buffer.slice(e.byteOffset,e.byteOffset+e.byteLength)
-return Promise.resolve(t)}stream(){const e=new I
-return e._read=function(){},e.push(this[H]),e.push(null),e}toString(){return"[object Blob]"}slice(){const e=this.size,t=arguments[0],n=arguments[1]
+i&&!/[^\u0020-\u007E]/.test(i)&&(this[H]=i)}get size(){return this[I].length}get type(){return this[H]}text(){return Promise.resolve(this[I].toString())}arrayBuffer(){const e=this[I],t=e.buffer.slice(e.byteOffset,e.byteOffset+e.byteLength)
+return Promise.resolve(t)}stream(){const e=new L
+return e._read=function(){},e.push(this[I]),e.push(null),e}toString(){return"[object Blob]"}slice(){const e=this.size,t=arguments[0],n=arguments[1]
 let r,i
 r=void 0===t?0:t<0?Math.max(e+t,0):Math.min(t,e),i=void 0===n?e:n<0?Math.max(e+n,0):Math.min(n,e)
-const s=Math.max(i-r,0),o=this[H].slice(r,r+s),a=new F([],{type:arguments[2]})
-return a[H]=o,a}}function M(e,t,n){Error.call(this,e),this.message=e,this.type=t,n&&(this.code=this.errno=n.code),Error.captureStackTrace(this,this.constructor)}let $
-Object.defineProperties(F.prototype,{size:{enumerable:!0},type:{enumerable:!0},slice:{enumerable:!0}}),Object.defineProperty(F.prototype,Symbol.toStringTag,{value:"Blob",writable:!1,enumerable:!1,configurable:!0}),M.prototype=Object.create(Error.prototype),M.prototype.constructor=M,M.prototype.name="FetchError"
-try{$=Object(function(){var e=new Error("Cannot find module 'encoding'")
-throw e.code="MODULE_NOT_FOUND",e}()).convert}catch(e){}const N=Symbol("Body internals"),B=l().PassThrough
-function q(e){var t=this,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},r=n.size
+const s=Math.max(i-r,0),o=this[I].slice(r,r+s),a=new D([],{type:arguments[2]})
+return a[I]=o,a}}function F(e,t,n){Error.call(this,e),this.message=e,this.type=t,n&&(this.code=this.errno=n.code),Error.captureStackTrace(this,this.constructor)}let M
+Object.defineProperties(D.prototype,{size:{enumerable:!0},type:{enumerable:!0},slice:{enumerable:!0}}),Object.defineProperty(D.prototype,Symbol.toStringTag,{value:"Blob",writable:!1,enumerable:!1,configurable:!0}),F.prototype=Object.create(Error.prototype),F.prototype.constructor=F,F.prototype.name="FetchError"
+try{M=Object(function(){var e=new Error("Cannot find module 'encoding'")
+throw e.code="MODULE_NOT_FOUND",e}()).convert}catch(e){}const $=Symbol("Body internals"),N=c().PassThrough
+function B(e){var t=this,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},r=n.size
 let i=void 0===r?0:r
 var s=n.timeout
 let o=void 0===s?0:s
-null==e?e=null:U(e)?e=Buffer.from(e.toString()):K(e)||Buffer.isBuffer(e)||("[object ArrayBuffer]"===Object.prototype.toString.call(e)?e=Buffer.from(e):ArrayBuffer.isView(e)?e=Buffer.from(e.buffer,e.byteOffset,e.byteLength):e instanceof l()||(e=Buffer.from(String(e)))),this[N]={body:e,disturbed:!1,error:null},this.size=i,this.timeout=o,e instanceof l()&&e.on("error",(function(e){const n="AbortError"===e.name?e:new M(`Invalid response body while trying to fetch ${t.url}: ${e.message}`,"system",e)
-t[N].error=n}))}function G(){var e=this
-if(this[N].disturbed)return q.Promise.reject(new TypeError("body used already for: "+this.url))
-if(this[N].disturbed=!0,this[N].error)return q.Promise.reject(this[N].error)
+null==e?e=null:G(e)?e=Buffer.from(e.toString()):U(e)||Buffer.isBuffer(e)||("[object ArrayBuffer]"===Object.prototype.toString.call(e)?e=Buffer.from(e):ArrayBuffer.isView(e)?e=Buffer.from(e.buffer,e.byteOffset,e.byteLength):e instanceof c()||(e=Buffer.from(String(e)))),this[$]={body:e,disturbed:!1,error:null},this.size=i,this.timeout=o,e instanceof c()&&e.on("error",(function(e){const n="AbortError"===e.name?e:new F(`Invalid response body while trying to fetch ${t.url}: ${e.message}`,"system",e)
+t[$].error=n}))}function q(){var e=this
+if(this[$].disturbed)return B.Promise.reject(new TypeError("body used already for: "+this.url))
+if(this[$].disturbed=!0,this[$].error)return B.Promise.reject(this[$].error)
 let t=this.body
-if(null===t)return q.Promise.resolve(Buffer.alloc(0))
-if(K(t)&&(t=t.stream()),Buffer.isBuffer(t))return q.Promise.resolve(t)
-if(!(t instanceof l()))return q.Promise.resolve(Buffer.alloc(0))
+if(null===t)return B.Promise.resolve(Buffer.alloc(0))
+if(U(t)&&(t=t.stream()),Buffer.isBuffer(t))return B.Promise.resolve(t)
+if(!(t instanceof c()))return B.Promise.resolve(Buffer.alloc(0))
 let n=[],r=0,i=!1
-return new q.Promise((function(s,o){let a
-e.timeout&&(a=setTimeout((function(){i=!0,o(new M(`Response timeout while trying to fetch ${e.url} (over ${e.timeout}ms)`,"body-timeout"))}),e.timeout)),t.on("error",(function(t){"AbortError"===t.name?(i=!0,o(t)):o(new M(`Invalid response body while trying to fetch ${e.url}: ${t.message}`,"system",t))})),t.on("data",(function(t){if(!i&&null!==t){if(e.size&&r+t.length>e.size)return i=!0,void o(new M(`content size at ${e.url} over limit: ${e.size}`,"max-size"))
+return new B.Promise((function(s,o){let a
+e.timeout&&(a=setTimeout((function(){i=!0,o(new F(`Response timeout while trying to fetch ${e.url} (over ${e.timeout}ms)`,"body-timeout"))}),e.timeout)),t.on("error",(function(t){"AbortError"===t.name?(i=!0,o(t)):o(new F(`Invalid response body while trying to fetch ${e.url}: ${t.message}`,"system",t))})),t.on("data",(function(t){if(!i&&null!==t){if(e.size&&r+t.length>e.size)return i=!0,void o(new F(`content size at ${e.url} over limit: ${e.size}`,"max-size"))
 r+=t.length,n.push(t)}})),t.on("end",(function(){if(!i){clearTimeout(a)
-try{s(Buffer.concat(n,r))}catch(t){o(new M(`Could not create Buffer from response body for ${e.url}: ${t.message}`,"system",t))}}}))}))}function U(e){return"object"==typeof e&&"function"==typeof e.append&&"function"==typeof e.delete&&"function"==typeof e.get&&"function"==typeof e.getAll&&"function"==typeof e.has&&"function"==typeof e.set&&("URLSearchParams"===e.constructor.name||"[object URLSearchParams]"===Object.prototype.toString.call(e)||"function"==typeof e.sort)}function K(e){return"object"==typeof e&&"function"==typeof e.arrayBuffer&&"string"==typeof e.type&&"function"==typeof e.stream&&"function"==typeof e.constructor&&"string"==typeof e.constructor.name&&/^(Blob|File)$/.test(e.constructor.name)&&/^(Blob|File)$/.test(e[Symbol.toStringTag])}function V(e){let t,n,r=e.body
+try{s(Buffer.concat(n,r))}catch(t){o(new F(`Could not create Buffer from response body for ${e.url}: ${t.message}`,"system",t))}}}))}))}function G(e){return"object"==typeof e&&"function"==typeof e.append&&"function"==typeof e.delete&&"function"==typeof e.get&&"function"==typeof e.getAll&&"function"==typeof e.has&&"function"==typeof e.set&&("URLSearchParams"===e.constructor.name||"[object URLSearchParams]"===Object.prototype.toString.call(e)||"function"==typeof e.sort)}function U(e){return"object"==typeof e&&"function"==typeof e.arrayBuffer&&"string"==typeof e.type&&"function"==typeof e.stream&&"function"==typeof e.constructor&&"string"==typeof e.constructor.name&&/^(Blob|File)$/.test(e.constructor.name)&&/^(Blob|File)$/.test(e[Symbol.toStringTag])}function K(e){let t,n,r=e.body
 if(e.bodyUsed)throw new Error("cannot clone body after it is used")
-return r instanceof l()&&"function"!=typeof r.getBoundary&&(t=new B,n=new B,r.pipe(t),r.pipe(n),e[N].body=t,r=n),r}function W(e){return null===e?null:"string"==typeof e?"text/plain;charset=UTF-8":U(e)?"application/x-www-form-urlencoded;charset=UTF-8":K(e)?e.type||null:Buffer.isBuffer(e)||"[object ArrayBuffer]"===Object.prototype.toString.call(e)||ArrayBuffer.isView(e)?null:"function"==typeof e.getBoundary?"multipart/form-data;boundary="+e.getBoundary():e instanceof l()?null:"text/plain;charset=UTF-8"}function z(e){const t=e.body
-return null===t?0:K(t)?t.size:Buffer.isBuffer(t)?t.length:t&&"function"==typeof t.getLengthSync&&(t._lengthRetrievers&&0==t._lengthRetrievers.length||t.hasKnownLength&&t.hasKnownLength())?t.getLengthSync():null}q.prototype={get body(){return this[N].body},get bodyUsed(){return this[N].disturbed},arrayBuffer(){return G.call(this).then((function(e){return e.buffer.slice(e.byteOffset,e.byteOffset+e.byteLength)}))},blob(){let e=this.headers&&this.headers.get("content-type")||""
-return G.call(this).then((function(t){return Object.assign(new F([],{type:e.toLowerCase()}),{[H]:t})}))},json(){var e=this
-return G.call(this).then((function(t){try{return JSON.parse(t.toString())}catch(t){return q.Promise.reject(new M(`invalid json response body at ${e.url} reason: ${t.message}`,"invalid-json"))}}))},text(){return G.call(this).then((function(e){return e.toString()}))},buffer(){return G.call(this)},textConverted(){var e=this
-return G.call(this).then((function(t){return function(e,t){if("function"!=typeof $)throw new Error("The package `encoding` must be installed to use the textConverted() function")
+return r instanceof c()&&"function"!=typeof r.getBoundary&&(t=new N,n=new N,r.pipe(t),r.pipe(n),e[$].body=t,r=n),r}function V(e){return null===e?null:"string"==typeof e?"text/plain;charset=UTF-8":G(e)?"application/x-www-form-urlencoded;charset=UTF-8":U(e)?e.type||null:Buffer.isBuffer(e)||"[object ArrayBuffer]"===Object.prototype.toString.call(e)||ArrayBuffer.isView(e)?null:"function"==typeof e.getBoundary?"multipart/form-data;boundary="+e.getBoundary():e instanceof c()?null:"text/plain;charset=UTF-8"}function W(e){const t=e.body
+return null===t?0:U(t)?t.size:Buffer.isBuffer(t)?t.length:t&&"function"==typeof t.getLengthSync&&(t._lengthRetrievers&&0==t._lengthRetrievers.length||t.hasKnownLength&&t.hasKnownLength())?t.getLengthSync():null}B.prototype={get body(){return this[$].body},get bodyUsed(){return this[$].disturbed},arrayBuffer(){return q.call(this).then((function(e){return e.buffer.slice(e.byteOffset,e.byteOffset+e.byteLength)}))},blob(){let e=this.headers&&this.headers.get("content-type")||""
+return q.call(this).then((function(t){return Object.assign(new D([],{type:e.toLowerCase()}),{[I]:t})}))},json(){var e=this
+return q.call(this).then((function(t){try{return JSON.parse(t.toString())}catch(t){return B.Promise.reject(new F(`invalid json response body at ${e.url} reason: ${t.message}`,"invalid-json"))}}))},text(){return q.call(this).then((function(e){return e.toString()}))},buffer(){return q.call(this)},textConverted(){var e=this
+return q.call(this).then((function(t){return function(e,t){if("function"!=typeof M)throw new Error("The package `encoding` must be installed to use the textConverted() function")
 const n=t.get("content-type")
 let r,i,s="utf-8"
 n&&(r=/charset=([^;]*)/i.exec(n))
@@ -1113,13 +1113,13 @@ i=e.slice(0,1024).toString(),!r&&i&&(r=/<meta.+?charset=(['"])(.+?)\1/i.exec(i))
 !r&&i&&(r=/<meta[\s]+?http-equiv=(['"])content-type\1[\s]+?content=(['"])(.+?)\2/i.exec(i),r&&(r=/charset=(.*)/i.exec(r.pop())))
 !r&&i&&(r=/<\?xml.+?encoding=(['"])(.+?)\1/i.exec(i))
 r&&(s=r.pop(),"gb2312"!==s&&"gbk"!==s||(s="gb18030"))
-return $(e,"UTF-8",s).toString()}(t,e.headers)}))}},Object.defineProperties(q.prototype,{body:{enumerable:!0},bodyUsed:{enumerable:!0},arrayBuffer:{enumerable:!0},blob:{enumerable:!0},json:{enumerable:!0},text:{enumerable:!0}}),q.mixIn=function(e){for(const t of Object.getOwnPropertyNames(q.prototype))if(!(t in e)){const n=Object.getOwnPropertyDescriptor(q.prototype,t)
-Object.defineProperty(e,t,n)}},q.Promise=global.Promise
-const Q=/[^\^_`a-zA-Z\-0-9!#$%&'*+.|~]/,Y=/[^\t\x20-\x7e\x80-\xff]/
-function X(e){if(e=""+e,Q.test(e)||""===e)throw new TypeError(e+" is not a legal HTTP header name")}function Z(e){if(e=""+e,Y.test(e))throw new TypeError(e+" is not a legal HTTP header value")}function J(e,t){t=t.toLowerCase()
-for(const n in e)if(n.toLowerCase()===t)return n}const ee=Symbol("map")
-class te{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:void 0
-if(this[ee]=Object.create(null),e instanceof te){const t=e.raw(),n=Object.keys(t)
+return M(e,"UTF-8",s).toString()}(t,e.headers)}))}},Object.defineProperties(B.prototype,{body:{enumerable:!0},bodyUsed:{enumerable:!0},arrayBuffer:{enumerable:!0},blob:{enumerable:!0},json:{enumerable:!0},text:{enumerable:!0}}),B.mixIn=function(e){for(const t of Object.getOwnPropertyNames(B.prototype))if(!(t in e)){const n=Object.getOwnPropertyDescriptor(B.prototype,t)
+Object.defineProperty(e,t,n)}},B.Promise=global.Promise
+const z=/[^\^_`a-zA-Z\-0-9!#$%&'*+.|~]/,Q=/[^\t\x20-\x7e\x80-\xff]/
+function Y(e){if(e=""+e,z.test(e)||""===e)throw new TypeError(e+" is not a legal HTTP header name")}function X(e){if(e=""+e,Q.test(e))throw new TypeError(e+" is not a legal HTTP header value")}function Z(e,t){t=t.toLowerCase()
+for(const n in e)if(n.toLowerCase()===t)return n}const J=Symbol("map")
+class ee{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:void 0
+if(this[J]=Object.create(null),e instanceof ee){const t=e.raw(),n=Object.keys(t)
 for(const e of n)for(const n of t[e])this.append(e,n)}else if(null==e);else{if("object"!=typeof e)throw new TypeError("Provided initializer must be an object")
 {const t=e[Symbol.iterator]
 if(null!=t){if("function"!=typeof t)throw new TypeError("Header pairs must be iterable")
@@ -1127,88 +1127,88 @@ const n=[]
 for(const t of e){if("object"!=typeof t||"function"!=typeof t[Symbol.iterator])throw new TypeError("Each header pair must be iterable")
 n.push(Array.from(t))}for(const e of n){if(2!==e.length)throw new TypeError("Each header pair must be a name/value tuple")
 this.append(e[0],e[1])}}else for(const t of Object.keys(e)){const n=e[t]
-this.append(t,n)}}}}get(e){X(e=""+e)
-const t=J(this[ee],e)
-return void 0===t?null:this[ee][t].join(", ")}forEach(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:void 0,n=ne(this),r=0
+this.append(t,n)}}}}get(e){Y(e=""+e)
+const t=Z(this[J],e)
+return void 0===t?null:this[J][t].join(", ")}forEach(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:void 0,n=te(this),r=0
 for(;r<n.length;){var i=n[r]
 const s=i[0],o=i[1]
-e.call(t,o,s,this),n=ne(this),r++}}set(e,t){t=""+t,X(e=""+e),Z(t)
-const n=J(this[ee],e)
-this[ee][void 0!==n?n:e]=[t]}append(e,t){t=""+t,X(e=""+e),Z(t)
-const n=J(this[ee],e)
-void 0!==n?this[ee][n].push(t):this[ee][e]=[t]}has(e){return X(e=""+e),void 0!==J(this[ee],e)}delete(e){X(e=""+e)
-const t=J(this[ee],e)
-void 0!==t&&delete this[ee][t]}raw(){return this[ee]}keys(){return ie(this,"key")}values(){return ie(this,"value")}[Symbol.iterator](){return ie(this,"key+value")}}function ne(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"key+value"
-const n=Object.keys(e[ee]).sort()
-return n.map("key"===t?function(e){return e.toLowerCase()}:"value"===t?function(t){return e[ee][t].join(", ")}:function(t){return[t.toLowerCase(),e[ee][t].join(", ")]})}te.prototype.entries=te.prototype[Symbol.iterator],Object.defineProperty(te.prototype,Symbol.toStringTag,{value:"Headers",writable:!1,enumerable:!1,configurable:!0}),Object.defineProperties(te.prototype,{get:{enumerable:!0},forEach:{enumerable:!0},set:{enumerable:!0},append:{enumerable:!0},has:{enumerable:!0},delete:{enumerable:!0},keys:{enumerable:!0},values:{enumerable:!0},entries:{enumerable:!0}})
-const re=Symbol("internal")
-function ie(e,t){const n=Object.create(se)
-return n[re]={target:e,kind:t,index:0},n}const se=Object.setPrototypeOf({next(){if(!this||Object.getPrototypeOf(this)!==se)throw new TypeError("Value of `this` is not a HeadersIterator")
-var e=this[re]
-const t=e.target,n=e.kind,r=e.index,i=ne(t,n)
-return r>=i.length?{value:void 0,done:!0}:(this[re].index=r+1,{value:i[r],done:!1})}},Object.getPrototypeOf(Object.getPrototypeOf([][Symbol.iterator]())))
-function oe(e){const t=Object.assign({__proto__:null},e[ee]),n=J(e[ee],"Host")
-return void 0!==n&&(t[n]=t[n][0]),t}Object.defineProperty(se,Symbol.toStringTag,{value:"HeadersIterator",writable:!1,enumerable:!1,configurable:!0})
-const ae=Symbol("Response internals"),ue=y().STATUS_CODES
-class ce{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{}
-q.call(this,e,t)
-const n=t.status||200,r=new te(t.headers)
-if(null!=e&&!r.has("Content-Type")){const t=W(e)
-t&&r.append("Content-Type",t)}this[ae]={url:t.url,status:n,statusText:t.statusText||ue[n],headers:r,counter:t.counter}}get url(){return this[ae].url||""}get status(){return this[ae].status}get ok(){return this[ae].status>=200&&this[ae].status<300}get redirected(){return this[ae].counter>0}get statusText(){return this[ae].statusText}get headers(){return this[ae].headers}clone(){return new ce(V(this),{url:this.url,status:this.status,statusText:this.statusText,headers:this.headers,ok:this.ok,redirected:this.redirected})}}q.mixIn(ce.prototype),Object.defineProperties(ce.prototype,{url:{enumerable:!0},status:{enumerable:!0},ok:{enumerable:!0},redirected:{enumerable:!0},statusText:{enumerable:!0},headers:{enumerable:!0},clone:{enumerable:!0}}),Object.defineProperty(ce.prototype,Symbol.toStringTag,{value:"Response",writable:!1,enumerable:!1,configurable:!0})
-const le=Symbol("Request internals"),he=P().parse,pe=P().format,de="destroy"in l().Readable.prototype
-function fe(e){return"object"==typeof e&&"object"==typeof e[le]}class _e{constructor(e){let t,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{}
-fe(e)?t=he(e.url):(t=e&&e.href?he(e.href):he(""+e),e={})
+e.call(t,o,s,this),n=te(this),r++}}set(e,t){t=""+t,Y(e=""+e),X(t)
+const n=Z(this[J],e)
+this[J][void 0!==n?n:e]=[t]}append(e,t){t=""+t,Y(e=""+e),X(t)
+const n=Z(this[J],e)
+void 0!==n?this[J][n].push(t):this[J][e]=[t]}has(e){return Y(e=""+e),void 0!==Z(this[J],e)}delete(e){Y(e=""+e)
+const t=Z(this[J],e)
+void 0!==t&&delete this[J][t]}raw(){return this[J]}keys(){return re(this,"key")}values(){return re(this,"value")}[Symbol.iterator](){return re(this,"key+value")}}function te(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"key+value"
+const n=Object.keys(e[J]).sort()
+return n.map("key"===t?function(e){return e.toLowerCase()}:"value"===t?function(t){return e[J][t].join(", ")}:function(t){return[t.toLowerCase(),e[J][t].join(", ")]})}ee.prototype.entries=ee.prototype[Symbol.iterator],Object.defineProperty(ee.prototype,Symbol.toStringTag,{value:"Headers",writable:!1,enumerable:!1,configurable:!0}),Object.defineProperties(ee.prototype,{get:{enumerable:!0},forEach:{enumerable:!0},set:{enumerable:!0},append:{enumerable:!0},has:{enumerable:!0},delete:{enumerable:!0},keys:{enumerable:!0},values:{enumerable:!0},entries:{enumerable:!0}})
+const ne=Symbol("internal")
+function re(e,t){const n=Object.create(ie)
+return n[ne]={target:e,kind:t,index:0},n}const ie=Object.setPrototypeOf({next(){if(!this||Object.getPrototypeOf(this)!==ie)throw new TypeError("Value of `this` is not a HeadersIterator")
+var e=this[ne]
+const t=e.target,n=e.kind,r=e.index,i=te(t,n)
+return r>=i.length?{value:void 0,done:!0}:(this[ne].index=r+1,{value:i[r],done:!1})}},Object.getPrototypeOf(Object.getPrototypeOf([][Symbol.iterator]())))
+function se(e){const t=Object.assign({__proto__:null},e[J]),n=Z(e[J],"Host")
+return void 0!==n&&(t[n]=t[n][0]),t}Object.defineProperty(ie,Symbol.toStringTag,{value:"HeadersIterator",writable:!1,enumerable:!1,configurable:!0})
+const oe=Symbol("Response internals"),ae=_().STATUS_CODES
+class ue{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:null,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{}
+B.call(this,e,t)
+const n=t.status||200,r=new ee(t.headers)
+if(null!=e&&!r.has("Content-Type")){const t=V(e)
+t&&r.append("Content-Type",t)}this[oe]={url:t.url,status:n,statusText:t.statusText||ae[n],headers:r,counter:t.counter}}get url(){return this[oe].url||""}get status(){return this[oe].status}get ok(){return this[oe].status>=200&&this[oe].status<300}get redirected(){return this[oe].counter>0}get statusText(){return this[oe].statusText}get headers(){return this[oe].headers}clone(){return new ue(K(this),{url:this.url,status:this.status,statusText:this.statusText,headers:this.headers,ok:this.ok,redirected:this.redirected})}}B.mixIn(ue.prototype),Object.defineProperties(ue.prototype,{url:{enumerable:!0},status:{enumerable:!0},ok:{enumerable:!0},redirected:{enumerable:!0},statusText:{enumerable:!0},headers:{enumerable:!0},clone:{enumerable:!0}}),Object.defineProperty(ue.prototype,Symbol.toStringTag,{value:"Response",writable:!1,enumerable:!1,configurable:!0})
+const ce=Symbol("Request internals"),le=O().parse,he=O().format,pe="destroy"in c().Readable.prototype
+function de(e){return"object"==typeof e&&"object"==typeof e[ce]}class fe{constructor(e){let t,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{}
+de(e)?t=le(e.url):(t=e&&e.href?le(e.href):le(""+e),e={})
 let r=n.method||e.method||"GET"
-if(r=r.toUpperCase(),(null!=n.body||fe(e)&&null!==e.body)&&("GET"===r||"HEAD"===r))throw new TypeError("Request with GET/HEAD method cannot have body")
-let i=null!=n.body?n.body:fe(e)&&null!==e.body?V(e):null
-q.call(this,i,{timeout:n.timeout||e.timeout||0,size:n.size||e.size||0})
-const s=new te(n.headers||e.headers||{})
-if(null!=i&&!s.has("Content-Type")){const e=W(i)
-e&&s.append("Content-Type",e)}let o=fe(e)?e.signal:null
+if(r=r.toUpperCase(),(null!=n.body||de(e)&&null!==e.body)&&("GET"===r||"HEAD"===r))throw new TypeError("Request with GET/HEAD method cannot have body")
+let i=null!=n.body?n.body:de(e)&&null!==e.body?K(e):null
+B.call(this,i,{timeout:n.timeout||e.timeout||0,size:n.size||e.size||0})
+const s=new ee(n.headers||e.headers||{})
+if(null!=i&&!s.has("Content-Type")){const e=V(i)
+e&&s.append("Content-Type",e)}let o=de(e)?e.signal:null
 if("signal"in n&&(o=n.signal),null!=o&&!function(e){const t=e&&"object"==typeof e&&Object.getPrototypeOf(e)
 return!(!t||"AbortSignal"!==t.constructor.name)}(o))throw new TypeError("Expected signal to be an instanceof AbortSignal")
-this[le]={method:r,redirect:n.redirect||e.redirect||"follow",headers:s,parsedURL:t,signal:o},this.follow=void 0!==n.follow?n.follow:void 0!==e.follow?e.follow:20,this.compress=void 0!==n.compress?n.compress:void 0===e.compress||e.compress,this.counter=n.counter||e.counter||0,this.agent=n.agent||e.agent}get method(){return this[le].method}get url(){return pe(this[le].parsedURL)}get headers(){return this[le].headers}get redirect(){return this[le].redirect}get signal(){return this[le].signal}clone(){return new _e(this)}}function ye(e){Error.call(this,e),this.type="aborted",this.message=e,Error.captureStackTrace(this,this.constructor)}q.mixIn(_e.prototype),Object.defineProperty(_e.prototype,Symbol.toStringTag,{value:"Request",writable:!1,enumerable:!1,configurable:!0}),Object.defineProperties(_e.prototype,{method:{enumerable:!0},url:{enumerable:!0},headers:{enumerable:!0},redirect:{enumerable:!0},clone:{enumerable:!0},signal:{enumerable:!0}}),ye.prototype=Object.create(Error.prototype),ye.prototype.constructor=ye,ye.prototype.name="AbortError"
-const ge=l().PassThrough,ve=P().resolve
-function me(e,t){if(!me.Promise)throw new Error("native promise missing, set fetch.Promise to your favorite alternative")
-return q.Promise=me.Promise,new me.Promise((function(n,r){const i=new _e(e,t),s=function(e){const t=e[le].parsedURL,n=new te(e[le].headers)
+this[ce]={method:r,redirect:n.redirect||e.redirect||"follow",headers:s,parsedURL:t,signal:o},this.follow=void 0!==n.follow?n.follow:void 0!==e.follow?e.follow:20,this.compress=void 0!==n.compress?n.compress:void 0===e.compress||e.compress,this.counter=n.counter||e.counter||0,this.agent=n.agent||e.agent}get method(){return this[ce].method}get url(){return he(this[ce].parsedURL)}get headers(){return this[ce].headers}get redirect(){return this[ce].redirect}get signal(){return this[ce].signal}clone(){return new fe(this)}}function _e(e){Error.call(this,e),this.type="aborted",this.message=e,Error.captureStackTrace(this,this.constructor)}B.mixIn(fe.prototype),Object.defineProperty(fe.prototype,Symbol.toStringTag,{value:"Request",writable:!1,enumerable:!1,configurable:!0}),Object.defineProperties(fe.prototype,{method:{enumerable:!0},url:{enumerable:!0},headers:{enumerable:!0},redirect:{enumerable:!0},clone:{enumerable:!0},signal:{enumerable:!0}}),_e.prototype=Object.create(Error.prototype),_e.prototype.constructor=_e,_e.prototype.name="AbortError"
+const ye=c().PassThrough,ge=O().resolve
+function ve(e,t){if(!ve.Promise)throw new Error("native promise missing, set fetch.Promise to your favorite alternative")
+return B.Promise=ve.Promise,new ve.Promise((function(n,r){const i=new fe(e,t),s=function(e){const t=e[ce].parsedURL,n=new ee(e[ce].headers)
 if(n.has("Accept")||n.set("Accept","*/*"),!t.protocol||!t.hostname)throw new TypeError("Only absolute URLs are supported")
 if(!/^https?:$/.test(t.protocol))throw new TypeError("Only HTTP(S) protocols are supported")
-if(e.signal&&e.body instanceof l().Readable&&!de)throw new Error("Cancellation of streamed requests with AbortSignal is not supported in node < 8")
+if(e.signal&&e.body instanceof c().Readable&&!pe)throw new Error("Cancellation of streamed requests with AbortSignal is not supported in node < 8")
 let r=null
-if(null==e.body&&/^(POST|PUT)$/i.test(e.method)&&(r="0"),null!=e.body){const t=z(e)
+if(null==e.body&&/^(POST|PUT)$/i.test(e.method)&&(r="0"),null!=e.body){const t=W(e)
 "number"==typeof t&&(r=String(t))}r&&n.set("Content-Length",r),n.has("User-Agent")||n.set("User-Agent","node-fetch/1.0 (+https://github.com/bitinn/node-fetch)"),e.compress&&!n.has("Accept-Encoding")&&n.set("Accept-Encoding","gzip,deflate")
 let i=e.agent
-return"function"==typeof i&&(i=i(t)),n.has("Connection")||i||n.set("Connection","close"),Object.assign({},t,{method:e.method,headers:oe(n),agent:i})}(i),o=("https:"===s.protocol?T():y()).request,a=i.signal
+return"function"==typeof i&&(i=i(t)),n.has("Connection")||i||n.set("Connection","close"),Object.assign({},t,{method:e.method,headers:se(n),agent:i})}(i),o=("https:"===s.protocol?C():_()).request,a=i.signal
 let u=null
-const c=function(){let e=new ye("The user aborted a request.")
-r(e),i.body&&i.body instanceof l().Readable&&i.body.destroy(e),u&&u.body&&u.body.emit("error",e)}
-if(a&&a.aborted)return void c()
-const h=function(){c(),f()},p=o(s)
+const l=function(){let e=new _e("The user aborted a request.")
+r(e),i.body&&i.body instanceof c().Readable&&i.body.destroy(e),u&&u.body&&u.body.emit("error",e)}
+if(a&&a.aborted)return void l()
+const h=function(){l(),f()},p=o(s)
 let d
-function f(){p.abort(),a&&a.removeEventListener("abort",h),clearTimeout(d)}a&&a.addEventListener("abort",h),i.timeout&&p.once("socket",(function(e){d=setTimeout((function(){r(new M("network timeout at: "+i.url,"request-timeout")),f()}),i.timeout)})),p.on("error",(function(e){r(new M(`request to ${i.url} failed, reason: ${e.message}`,"system",e)),f()})),p.on("response",(function(e){clearTimeout(d)
-const t=function(e){const t=new te
-for(const n of Object.keys(e))if(!Q.test(n))if(Array.isArray(e[n]))for(const r of e[n])Y.test(r)||(void 0===t[ee][n]?t[ee][n]=[r]:t[ee][n].push(r))
-else Y.test(e[n])||(t[ee][n]=[e[n]])
+function f(){p.abort(),a&&a.removeEventListener("abort",h),clearTimeout(d)}a&&a.addEventListener("abort",h),i.timeout&&p.once("socket",(function(e){d=setTimeout((function(){r(new F("network timeout at: "+i.url,"request-timeout")),f()}),i.timeout)})),p.on("error",(function(e){r(new F(`request to ${i.url} failed, reason: ${e.message}`,"system",e)),f()})),p.on("response",(function(e){clearTimeout(d)
+const t=function(e){const t=new ee
+for(const n of Object.keys(e))if(!z.test(n))if(Array.isArray(e[n]))for(const r of e[n])Q.test(r)||(void 0===t[J][n]?t[J][n]=[r]:t[J][n].push(r))
+else Q.test(e[n])||(t[J][n]=[e[n]])
 return t}(e.headers)
-if(me.isRedirect(e.statusCode)){const s=t.get("Location"),o=null===s?null:ve(i.url,s)
-switch(i.redirect){case"error":return r(new M("redirect mode is set to error: "+i.url,"no-redirect")),void f()
+if(ve.isRedirect(e.statusCode)){const s=t.get("Location"),o=null===s?null:ge(i.url,s)
+switch(i.redirect){case"error":return r(new F("redirect mode is set to error: "+i.url,"no-redirect")),void f()
 case"manual":if(null!==o)try{t.set("Location",o)}catch(e){r(e)}break
 case"follow":if(null===o)break
-if(i.counter>=i.follow)return r(new M("maximum redirect reached at: "+i.url,"max-redirect")),void f()
-const s={headers:new te(i.headers),follow:i.follow,counter:i.counter+1,agent:i.agent,compress:i.compress,method:i.method,body:i.body,signal:i.signal,timeout:i.timeout}
-return 303!==e.statusCode&&i.body&&null===z(i)?(r(new M("Cannot follow redirect with body being a readable stream","unsupported-redirect")),void f()):(303!==e.statusCode&&(301!==e.statusCode&&302!==e.statusCode||"POST"!==i.method)||(s.method="GET",s.body=void 0,s.headers.delete("content-length")),n(me(new _e(o,s))),void f())}}e.once("end",(function(){a&&a.removeEventListener("abort",h)}))
-let s=e.pipe(new ge)
+if(i.counter>=i.follow)return r(new F("maximum redirect reached at: "+i.url,"max-redirect")),void f()
+const s={headers:new ee(i.headers),follow:i.follow,counter:i.counter+1,agent:i.agent,compress:i.compress,method:i.method,body:i.body,signal:i.signal,timeout:i.timeout}
+return 303!==e.statusCode&&i.body&&null===W(i)?(r(new F("Cannot follow redirect with body being a readable stream","unsupported-redirect")),void f()):(303!==e.statusCode&&(301!==e.statusCode&&302!==e.statusCode||"POST"!==i.method)||(s.method="GET",s.body=void 0,s.headers.delete("content-length")),n(ve(new fe(o,s))),void f())}}e.once("end",(function(){a&&a.removeEventListener("abort",h)}))
+let s=e.pipe(new ye)
 const o={url:i.url,status:e.statusCode,statusText:e.statusMessage,headers:t,size:i.size,timeout:i.timeout,counter:i.counter},c=t.get("Content-Encoding")
-if(!i.compress||"HEAD"===i.method||null===c||204===e.statusCode||304===e.statusCode)return u=new ce(s,o),void n(u)
-const l={flush:L().Z_SYNC_FLUSH,finishFlush:L().Z_SYNC_FLUSH}
-if("gzip"==c||"x-gzip"==c)return s=s.pipe(L().createGunzip(l)),u=new ce(s,o),void n(u)
-if("deflate"!=c&&"x-deflate"!=c){if("br"==c&&"function"==typeof L().createBrotliDecompress)return s=s.pipe(L().createBrotliDecompress()),u=new ce(s,o),void n(u)
-u=new ce(s,o),n(u)}else{e.pipe(new ge).once("data",(function(e){s=8==(15&e[0])?s.pipe(L().createInflate()):s.pipe(L().createInflateRaw()),u=new ce(s,o),n(u)}))}})),function(e,t){const n=t.body
-null===n?e.end():K(n)?n.stream().pipe(e):Buffer.isBuffer(n)?(e.write(n),e.end()):n.pipe(e)}(p,i)}))}me.isRedirect=function(e){return 301===e||302===e||303===e||307===e||308===e},me.Promise=global.Promise
-const be=me
-var we=function(){return(we=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
-return e}).apply(this,arguments)},Se=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},ke=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+if(!i.compress||"HEAD"===i.method||null===c||204===e.statusCode||304===e.statusCode)return u=new ue(s,o),void n(u)
+const l={flush:j().Z_SYNC_FLUSH,finishFlush:j().Z_SYNC_FLUSH}
+if("gzip"==c||"x-gzip"==c)return s=s.pipe(j().createGunzip(l)),u=new ue(s,o),void n(u)
+if("deflate"!=c&&"x-deflate"!=c){if("br"==c&&"function"==typeof j().createBrotliDecompress)return s=s.pipe(j().createBrotliDecompress()),u=new ue(s,o),void n(u)
+u=new ue(s,o),n(u)}else{e.pipe(new ye).once("data",(function(e){s=8==(15&e[0])?s.pipe(j().createInflate()):s.pipe(j().createInflateRaw()),u=new ue(s,o),n(u)}))}})),function(e,t){const n=t.body
+null===n?e.end():U(n)?n.stream().pipe(e):Buffer.isBuffer(n)?(e.write(n),e.end()):n.pipe(e)}(p,i)}))}ve.isRedirect=function(e){return 301===e||302===e||303===e||307===e||308===e},ve.Promise=global.Promise
+const me=ve
+var be=function(){return(be=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
+return e}).apply(this,arguments)},we=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},Se=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1226,42 +1226,42 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},xe=function(e,t){var n={}
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},ke=function(e,t){var n={}
 for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r])
 if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0
-for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},Ee={},Ae=function(e,t){if(!Ee[e]){var n=Object.entries(t.bottlenecks).find((function(t){var n=t[0]
-return f().isMatch(e,n)})),r=n?n[1]:{},i=r.minTime,s=void 0===i?400:i,o=r.maxConcurrent,a=void 0===o?1:o
-Ee[e]=new(R())({minTime:s,maxConcurrent:a})}return Ee[e]},Re=function(e,t,n){return Se(void 0,void 0,void 0,(function(){return ke(this,(function(r){return[2,Ae(e.hostname,n).schedule((function(){return be(e.href,t)}))]}))}))},Oe=function(e,t,n){return void 0===t&&(t={}),Se(void 0,void 0,void 0,(function(){var r,i,s
-return ke(this,(function(o){switch(o.label){case 0:return[4,Re(e,we(we({},t),{method:"HEAD"}),n)]
-case 1:return 405===(r=o.sent()).status?[2,Re(e,we(we({},t),{method:"GET"}),n)]:429===r.status&&(i=r.headers.get("retry-after"))?(s=1e3*Number(i),[2,new Promise((function(r){setTimeout((function(){return Se(void 0,void 0,void 0,(function(){var i
-return ke(this,(function(s){switch(s.label){case 0:return i=r,[4,Oe(e,t,n)]
-case 1:return i.apply(void 0,[s.sent()]),[2]}}))}))}),s)}))]):[2,r]}}))}))},Pe={},Ce=function(e,t){return Se(void 0,void 0,void 0,(function(){var n,r
-return ke(this,(function(i){return n=e.href,(r=Pe[n])?[2,r]:(Pe[n]=Oe(e,{},t),[2,Pe[n]])}))}))},Te=new Set
-const je=function(e,t){var n=e.link,r=e.url
-return Se(void 0,void 0,void 0,(function(){var e,i,s,o,a,u,c,l
-return ke(this,(function(h){switch(h.label){case 0:if(e=t.linkIncludePatterns,i=t.linkExcludePatterns,s=t.dryRun,!function(e,t,n){var r=n.ignore,i=xe(n,["ignore"])
-if(f().isMatch(e,t,i)){if(r)if(Array.isArray(r)){var s=r.find((function(t){return f().isMatch(e,t,i)}))
-if(s)return Te.add(s),!1}else if(f().isMatch(e,r,i))return Te.add(r),!1
+for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},xe={},Ee=function(e,t){if(!xe[e]){var n=Object.entries(t.bottlenecks).find((function(t){var n=t[0]
+return d().isMatch(e,n)})),r=n?n[1]:{},i=r.minTime,s=void 0===i?400:i,o=r.maxConcurrent,a=void 0===o?1:o
+xe[e]=new(A())({minTime:s,maxConcurrent:a})}return xe[e]},Ae=function(e,t,n){return we(void 0,void 0,void 0,(function(){return Se(this,(function(r){return[2,Ee(e.hostname,n).schedule((function(){return me(e.href,t)}))]}))}))},Re=function(e,t,n){return void 0===t&&(t={}),we(void 0,void 0,void 0,(function(){var r,i,s
+return Se(this,(function(o){switch(o.label){case 0:return[4,Ae(e,be(be({},t),{method:"HEAD"}),n)]
+case 1:return 405===(r=o.sent()).status?[2,Ae(e,be(be({},t),{method:"GET"}),n)]:429===r.status&&(i=r.headers.get("retry-after"))?(s=1e3*Number(i),[2,new Promise((function(r){setTimeout((function(){return we(void 0,void 0,void 0,(function(){var i
+return Se(this,(function(s){switch(s.label){case 0:return i=r,[4,Re(e,t,n)]
+case 1:return i.apply(void 0,[s.sent()]),[2]}}))}))}),s)}))]):[2,r]}}))}))},Oe={},Pe=function(e,t){return we(void 0,void 0,void 0,(function(){var n,r
+return Se(this,(function(i){return n=e.href,(r=Oe[n])?[2,r]:(Oe[n]=Re(e,{},t),[2,Oe[n]])}))}))},Ce=new Set
+const Te=function(e,t){var n=e.link,r=e.url
+return we(void 0,void 0,void 0,(function(){var e,i,s,o,a,u,c,l
+return Se(this,(function(h){switch(h.label){case 0:if(e=t.linkIncludePatterns,i=t.linkExcludePatterns,s=t.dryRun,!function(e,t,n){var r=n.ignore,i=ke(n,["ignore"])
+if(d().isMatch(e,t,i)){if(r)if(Array.isArray(r)){var s=r.find((function(t){return d().isMatch(e,t,i)}))
+if(s)return Ce.add(s),!1}else if(d().isMatch(e,r,i))return Ce.add(r),!1
 return!0}return!1}(n,e,{ignore:i,bash:!0}))return[3,5]
 if(o=r.href,s)return[2,{link:n,href:n===o?null:o,description:"Skipped because of dry-run",pass:!0}]
 h.label=1
-case 1:return h.trys.push([1,3,,4]),[4,Ce(r,t)]
+case 1:return h.trys.push([1,3,,4]),[4,Pe(r,t)]
 case 2:return a=h.sent(),u=a.status,c=a.ok,[2,{link:n,href:n===o?null:o,description:u,pass:c}]
 case 3:return l=h.sent(),[2,{link:n,href:o,description:["Error",l.code&&" "+l.code,l.message&&": "+l.message].filter(Boolean).join(""),pass:!1}]
 case 4:return[3,6]
 case 5:return[2,{link:n,description:"Excluded",pass:!0}]
 case 6:return[2]}}))}))}
-var Le=function(e,t,n){void 0===n&&(n=function(e){return e[1]})
+var je=function(e,t,n){void 0===n&&(n=function(e){return e[1]})
 for(var r=[],i=t.exec(e);null!==i;){var s=n(i)
-s&&r.push(s),i=t.exec(e)}return r},Ie=function(e,t){switch(u().extname(e)){case".md":case".mdx":var n=Le(t,/\[.*?\]\((?:<((?:\(.*?\)|.)*?)>|((?:\(.*?\)|.)*?))(?: ["'].*?["'])?\)/gm,(function(e){return e[2]||e[1]})),r=Le(t,/href="(.*?)"/gm),i=n.concat(r)
+s&&r.push(s),i=t.exec(e)}return r},Le=function(e,t){switch(a().extname(e)){case".md":case".mdx":var n=je(t,/\[.*?\]\((?:<((?:\(.*?\)|.)*?)>|((?:\(.*?\)|.)*?))(?: ["'].*?["'])?\)/gm,(function(e){return e[2]||e[1]})),r=je(t,/href="(.*?)"/gm),i=n.concat(r)
 return i?i.filter(Boolean).map((function(e){return e.startsWith("/static")?e.slice(7):e})):null
-case".html":return Le(t,/href="(.*?)"/gm)
-case".json":return Le(t,/"(?:(?:https?:)?\/\/)?(?:)"/gm)
-default:return Le(t,/(((https?:\/\/)[A-Za-z0-9.-]+|(?:www\.)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/gm,(function(e){return e[0]}))}}
-const He=function(e){var t=e.filePath,n=e.content
-return(Array.isArray(n)?[].concat.apply([],n.map((function(e){return Ie(t,e)}))):Ie(t,n)).filter((function(e){return e&&!e.startsWith("#")}))}
-var De=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},Fe=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+case".html":return je(t,/href="(.*?)"/gm)
+case".json":return je(t,/"(?:(?:https?:)?\/\/)?(?:)"/gm)
+default:return je(t,/(((https?:\/\/)[A-Za-z0-9.-]+|(?:www\.)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/gm,(function(e){return e[0]}))}}
+const Ie=function(e){var t=e.filePath,n=e.content
+return(Array.isArray(n)?[].concat.apply([],n.map((function(e){return Le(t,e)}))):Le(t,n)).filter((function(e){return e&&!e.startsWith("#")}))}
+var He=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},De=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1280,8 +1280,8 @@ break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
 return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}}
-function Me(e,t){return De(this,void 0,void 0,(function(){return Fe(this,(function(n){return[2,Promise.all(e.map(t))]}))}))}var $e=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},Ne=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+function Fe(e,t){return He(this,void 0,void 0,(function(){return De(this,(function(n){return[2,Promise.all(e.map(t))]}))}))}var Me=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},$e=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1299,36 +1299,36 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},Be=function(e,t){var n=e.filePath,r=e.content
-return $e(void 0,void 0,void 0,(function(){var e,i,s
-return Ne(this,(function(o){switch(o.label){case 0:return e=t.rootURL,s={filePath:n},[4,"function"==typeof r?r(n):r]
-case 1:return s.content=o.sent(),[4,Me(He(s),(function(n){return $e(void 0,void 0,void 0,(function(){var r
-return Ne(this,(function(i){switch(i.label){case 0:return(r=function(e,t){try{return new URL(/^(https?:\/)?\//.test(e)?e:"https://"+e,t)}catch(e){return null}}(n,e))?[4,je({link:n,url:r},t)]:[2,null]
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},Ne=function(e,t){var n=e.filePath,r=e.content
+return Me(void 0,void 0,void 0,(function(){var e,i,s
+return $e(this,(function(o){switch(o.label){case 0:return e=t.rootURL,s={filePath:n},[4,"function"==typeof r?r(n):r]
+case 1:return s.content=o.sent(),[4,Fe(Ie(s),(function(n){return Me(void 0,void 0,void 0,(function(){var r
+return $e(this,(function(i){switch(i.label){case 0:return(r=function(e,t){try{return new URL(/^(https?:\/)?\//.test(e)?e:"https://"+e,t)}catch(e){return null}}(n,e))?[4,Te({link:n,url:r},t)]:[2,null]
 case 1:return[2,i.sent()]}}))}))}))]
 case 2:return i=o.sent().filter(Boolean),[2,{filePath:n,checks:i}]}}))}))}
-function qe(e,t){return $e(this,void 0,void 0,(function(){var n,r,i,s
-return Ne(this,(function(o){switch(o.label){case 0:return[4,Me(e,(function(e){return Be(e,t)}))]
+function Be(e,t){return Me(this,void 0,void 0,(function(){var n,r,i,s
+return $e(this,(function(o){switch(o.label){case 0:return[4,Fe(e,(function(e){return Ne(e,t)}))]
 case 1:return n=o.sent(),r=n.reduce((function(e,t){var n=e[0],r=e[1],i=t.checks
-return[n+i.length,r+i.filter((function(e){return!e.pass})).length]}),[0,0]),i=r[0],s=r[1],[2,{totalChecks:i,failedChecks:s,entries:n,unusedPatterns:(a=t.linkExcludePatterns,a?a.filter((function(e){return!Te.has(e)})):[])}]}var a}))}))}const Ge=function(e,t,n){var r=t.output,i=Array.isArray(r)?r:[r]
+return[n+i.length,r+i.filter((function(e){return!e.pass})).length]}),[0,0]),i=r[0],s=r[1],[2,{totalChecks:i,failedChecks:s,entries:n,unusedPatterns:(a=t.linkExcludePatterns,a?a.filter((function(e){return!Ce.has(e)})):[])}]}var a}))}))}const qe=function(e,t,n){var r=t.output,i=Array.isArray(r)?r:[r]
 e.forEach((function(e){var r=e.name,s=e.reporter
 i.includes(r)&&s(n,t)}))}
-var Ue=function(e){var t=e.checks,n=e.filePath
-return"* "+(t.some((function(e){return!e.pass}))?"FAIL":"PASS")+": "+n+"\n"},Ke=function(e){var t=e.link,n=e.href,r=e.description
-return"  - "+(e.pass?"PASS":"FAIL")+": "+t+(n?" = "+n:"")+" ("+r+")"},Ve=function(e,t){var n=e.filePath,r=e.checks,i=t.fileFormat,s=void 0===i?Ue:i,o=t.linkFormat,a=void 0===o?Ke:o,u=t.linkSeparator,c=void 0===u?"\n":u
+var Ge=function(e){var t=e.checks,n=e.filePath
+return"* "+(t.some((function(e){return!e.pass}))?"FAIL":"PASS")+": "+n+"\n"},Ue=function(e){var t=e.link,n=e.href,r=e.description
+return"  - "+(e.pass?"PASS":"FAIL")+": "+t+(n?" = "+n:"")+" ("+r+")"},Ke=function(e,t){var n=e.filePath,r=e.checks,i=t.fileFormat,s=void 0===i?Ge:i,o=t.linkFormat,a=void 0===o?Ue:o,u=t.linkSeparator,c=void 0===u?"\n":u
 return r.length>0?s({filePath:n,checks:r})+r.sort((function(e,t){return e.pass===t.pass?0:e.pass?1:-1})).map(a).join(c):null}
-const We=function(e,t){void 0===t&&(t={})
-var n=t.entryFormat,r=void 0===n?Ve:n,i=t.entrySeparator,s=void 0===i?"\n\n":i
+const Ve=function(e,t){void 0===t&&(t={})
+var n=t.entryFormat,r=void 0===n?Ke:n,i=t.entrySeparator,s=void 0===i?"\n\n":i
 return e.map((function(e,n){return r(e,t,n)})).filter(Boolean).join(s)}
-function ze(e){console.log(e.join("\n\n"))}var Qe=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
+function We(e){console.log(e.join("\n\n"))}var ze=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
 var r=Array(e),i=0
 for(t=0;t<n;t++)for(var s=arguments[t],o=0,a=s.length;o<a;o++,i++)r[i]=s[o]
-return r},Ye=function(e,t){return e&&e.length>0?e.join(t):void 0}
-function Xe(e){var t=e.success,n=e.conclusion,i=void 0===n?t?"success":"failure":n,s=e.summarySegments,o=e.descriptionSegments,a=e.summary,u=void 0===a?Ye(s,", "):a,c=e.description,l=void 0===c?Ye(o,"\n\n"):c
-r().setOutput("conclusion",i)
+return r},Qe=function(e,t){return e&&e.length>0?e.join(t):void 0}
+function Ye(t){var n=t.success,r=t.conclusion,i=void 0===r?n?"success":"failure":r,s=t.summarySegments,o=t.descriptionSegments,a=t.summary,u=void 0===a?Qe(s,", "):a,c=t.description,l=void 0===c?Qe(o,"\n\n"):c
+e.setOutput("conclusion",i)
 var h={summary:u}
-l&&(h.text_description=l),r().setOutput("output",JSON.stringify(h))}var Ze=function(){return(Ze=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
-return e}).apply(this,arguments)},Je=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},et=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+l&&(h.text_description=l),e.setOutput("output",JSON.stringify(h))}var Xe=function(){return(Xe=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
+return e}).apply(this,arguments)},Ze=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},Je=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1346,27 +1346,27 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},tt=function(e,t){var n={}
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},et=function(e,t){var n={}
 for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r])
 if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0
-for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},nt=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
+for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},tt=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
 var r=Array(e),i=0
 for(t=0;t<n;t++)for(var s=arguments[t],o=0,a=s.length;o<a;o++,i++)r[i]=s[o]
-return r},rt=function(e){if(e){if(!Array.isArray(e))return e
+return r},nt=function(e){if(e){if(!Array.isArray(e))return e
 if(e.length>0)return e}return"**"}
-function it(e){return Je(this,void 0,void 0,(function(){return et(this,(function(t){return[2,new Promise((function(t,n){return p().readFile(e,(function(e,r){return e?n(e):t(String(r).split(/\n+/))}))}))]}))}))}function st(e){return Je(this,void 0,void 0,(function(){var t,n,r,i,s
-return et(this,(function(o){switch(o.label){case 0:return e?Array.isArray(e)?(r=(n=(s=[]).concat).apply,i=[s],[4,Me(e,it)]):[3,2]:[2,[]]
+function rt(e){return Ze(this,void 0,void 0,(function(){return Je(this,(function(t){return[2,new Promise((function(t,n){return h().readFile(e,(function(e,r){return e?n(e):t(String(r).split(/\n+/))}))}))]}))}))}function it(e){return Ze(this,void 0,void 0,(function(){var t,n,r,i,s
+return Je(this,(function(o){switch(o.label){case 0:return e?Array.isArray(e)?(r=(n=(s=[]).concat).apply,i=[s],[4,Fe(e,rt)]):[3,2]:[2,[]]
 case 1:return t=r.apply(n,i.concat([o.sent()])),[3,3]
-case 2:t=it(e),o.label=3
-case 3:return[2,t]}}))}))}function ot(e){return Je(this,void 0,void 0,(function(){var t=this
-return et(this,(function(n){return[2,Me(e,(function(e){var n=e[0],r=e[1]
-return Je(t,void 0,void 0,(function(){var e
-return et(this,(function(t){switch(t.label){case 0:return[4,st(n)]
-case 1:return e=t.sent(),[2,(r?e.concat(r):e).filter(Boolean)]}}))}))}))]}))}))}function at(e){return Je(this,void 0,void 0,(function(){var n,r,i,s,o,a,u,c,l,h,p,d,f,_,y,g,v,m,b,w,S
-return et(this,(function(k){switch(k.label){case 0:return n=t().apply(void 0,nt([{}],e.filter(Boolean))),r=n.fileIncludePatterns,i=n.fileExcludePatterns,s=n.fileIncludePatternFiles,o=n.fileExcludePatternFiles,a=n.linkIncludePatterns,u=n.linkExcludePatterns,c=n.linkIncludePatternFiles,l=n.linkExcludePatternFiles,h=n.reportUnusedPatterns,p=n.dryRun,d=void 0===p?"only"===h:p,f=n.bottlenecks,_=void 0===f?{}:f,y=n.output,g=tt(n,["fileIncludePatterns","fileExcludePatterns","fileIncludePatternFiles","fileExcludePatternFiles","linkIncludePatterns","linkExcludePatterns","linkIncludePatternFiles","linkExcludePatternFiles","reportUnusedPatterns","dryRun","bottlenecks","output"]),[4,ot([[c,a],[l,u],[s,r],[o,i]])]
-case 1:return v=k.sent(),m=v[0],b=v[1],w=v[2],S=v[3],[2,Ze(Ze({},g),{bottlenecks:_,reportUnusedPatterns:h,dryRun:d,output:y&&(Array.isArray(y)?y:[y]),linkIncludePatterns:rt(m),linkExcludePatterns:b,fileIncludePatterns:rt(w),fileExcludePatterns:S})]}}))}))}var ut=function(){return(ut=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
-return e}).apply(this,arguments)},ct=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
-e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},lt=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
+case 2:t=rt(e),o.label=3
+case 3:return[2,t]}}))}))}function st(e){return Ze(this,void 0,void 0,(function(){var t=this
+return Je(this,(function(n){return[2,Fe(e,(function(e){var n=e[0],r=e[1]
+return Ze(t,void 0,void 0,(function(){var e
+return Je(this,(function(t){switch(t.label){case 0:return[4,it(n)]
+case 1:return e=t.sent(),[2,(r?e.concat(r):e).filter(Boolean)]}}))}))}))]}))}))}function ot(e){return Ze(this,void 0,void 0,(function(){var t,r,i,s,o,a,u,c,l,h,p,d,f,_,y,g,v,m,b,w,S
+return Je(this,(function(k){switch(k.label){case 0:return t=n().apply(void 0,tt([{}],e.filter(Boolean))),r=t.fileIncludePatterns,i=t.fileExcludePatterns,s=t.fileIncludePatternFiles,o=t.fileExcludePatternFiles,a=t.linkIncludePatterns,u=t.linkExcludePatterns,c=t.linkIncludePatternFiles,l=t.linkExcludePatternFiles,h=t.reportUnusedPatterns,p=t.dryRun,d=void 0===p?"only"===h:p,f=t.bottlenecks,_=void 0===f?{}:f,y=t.output,g=et(t,["fileIncludePatterns","fileExcludePatterns","fileIncludePatternFiles","fileExcludePatternFiles","linkIncludePatterns","linkExcludePatterns","linkIncludePatternFiles","linkExcludePatternFiles","reportUnusedPatterns","dryRun","bottlenecks","output"]),[4,st([[c,a],[l,u],[s,r],[o,i]])]
+case 1:return v=k.sent(),m=v[0],b=v[1],w=v[2],S=v[3],[2,Xe(Xe({},g),{bottlenecks:_,reportUnusedPatterns:h,dryRun:d,output:y&&(Array.isArray(y)?y:[y]),linkIncludePatterns:nt(m),linkExcludePatterns:b,fileIncludePatterns:nt(w),fileExcludePatterns:S})]}}))}))}var at=function(){return(at=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var i in t=arguments[n])Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])
+return e}).apply(this,arguments)},ut=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
+e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},ct=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
 return i[1]},trys:[],ops:[]}
 return s={next:a(0),throw:a(1),return:a(2)},"function"==typeof Symbol&&(s[Symbol.iterator]=function(){return this}),s
 function a(s){return function(a){return function(s){if(n)throw new TypeError("Generator is already executing.")
@@ -1384,36 +1384,34 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},ht=function(e,t){var n={}
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},lt=function(e,t){var n={}
 for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r])
 if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0
-for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},pt=[{name:"checkAction",reporter:function(e,t){var n=e.totalChecks,r=e.failedChecks,i=e.entries,s=e.unusedPatterns,o=t.reportUnusedPatterns,a=[],u=[]
-if(0===n)return Xe({summary:"There were no files to check links in.",success:!0})
-if(0===r)return Xe({summary:"All links passed the check!",success:!0})
+for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},ht=function(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length
+var r=Array(e),i=0
+for(t=0;t<n;t++)for(var s=arguments[t],o=0,a=s.length;o<a;o++,i++)r[i]=s[o]
+return r},pt=[{name:"checkAction",reporter:function(e,t){var n=e.totalChecks,r=e.failedChecks,i=e.entries,s=e.unusedPatterns,o=t.reportUnusedPatterns,a=[],u=[]
+if(0===n)return Ye({summary:"There were no files to check links in.",success:!0})
+if(0===r)return Ye({summary:"All links passed the check!",success:!0})
 if(o&&s.length>0){var c=s.map((function(e){return"  - "+e})).join("\n\n")
-if(a.push("Some link patterns were unused"),u.push("# Unused match patterns\n\n"+c),"only"===o)return Xe({summarySegments:a,descriptionSegments:u,success:!1})}var l=r>0
+if(a.push("Some link patterns were unused"),u.push("# Unused match patterns\n\n"+c),"only"===o)return Ye({summarySegments:a,descriptionSegments:u,success:!1})}var l=r>0
 if(l){var h=function(e){return e.reduce((function(e,t){var n=t.filePath,r=t.checks.filter((function(e){return!e.pass}))
-return r.length>0?Qe(e,[{filePath:n,checks:r}]):e}),[])}(i)
-a.push("Some new links failed the check."),u.push("# Failed checks\n\n"+We(h,{fileFormat:function(e){return"* "+e.filePath+"\n"},linkFormat:function(e){var t=e.link,n=e.href
+return r.length>0?ze(e,[{filePath:n,checks:r}]):e}),[])}(i)
+a.push("Some new links failed the check."),u.push("# Failed checks\n\n"+Ve(h,{fileFormat:function(e){return"* "+e.filePath+"\n"},linkFormat:function(e){var t=e.link,n=e.href
 return"  - "+t+(n&&n!==t?" = "+n:"")+" ("+e.description+")"}}))}else a.push("All new links passed the check!")
-return Xe({summarySegments:a,descriptionSegments:u,success:!l})}},{name:"consoleLog",reporter:function(e,t){var n=t.reportUnusedPatterns,r=e.totalChecks,i=e.failedChecks,s=e.entries,o=e.unusedPatterns,a=[]
+return Ye({summarySegments:a,descriptionSegments:u,success:!l})}},{name:"consoleLog",reporter:function(e,t){var n=t.reportUnusedPatterns,r=e.totalChecks,i=e.failedChecks,s=e.entries,o=e.unusedPatterns,a=[]
 if(0===r)a.push("There were no links to check!")
-else{var u=We(s)
-if(n&&(o.length>0?a.push("Some link ignore patterns were unused!\n\n"+o.join("\n")+"\n"):a.push("All link patterns were used."),"only"===n))return ze(a)
-i>0?a.push(u+"\n\n"+i+" links failed."):a.push(u+"\n\nAll links passed!")}return ze(a)}},{name:"exitCode",reporter:function(e,t){var n=t.failOnUnusedPatterns,r=t.reportUnusedPatterns,i=e.unusedPatterns,s=e.failedChecks;(n||"only"===r)&&i.length>0&&process.exit(3),s>0&&process.exit(2),process.exit(0)}}]
-function dt(e){return ct(this,void 0,void 0,(function(){var t
-return lt(this,(function(r){switch(r.label){case 0:return[4,n.getInput(e)]
-case 1:t=r.sent()
-try{return[2,JSON.parse(t)]}catch(e){if(e instanceof SyntaxError)return[2,t]
-throw e}return[2]}}))}))}function ft(){return ct(this,void 0,void 0,(function(){var e,t,n,r,i,s,o,a=this
-return lt(this,(function(c){switch(c.label){case 0:return[4,Me(["source","configFile","rootURL","dryRun","reportUnusedPatterns","linkIncludePatternFiles","linkIncludePatterns","linkExcludePatternFiles","linkExcludePatterns","fileIncludePatternFiles","fileIncludePatterns","fileExcludePatternFiles","fileExcludePatterns","output"],(function(e){return ct(a,void 0,void 0,(function(){var t
-return lt(this,(function(n){switch(n.label){case 0:return t=[e],[4,dt(e)]
-case 1:return[2,t.concat([n.sent()])]}}))}))}))]
-case 1:return e=c.sent().reduce((function(e,t){var n=t[0],r=t[1]
-return""!==r&&(e[n]=r),e}),{}),t=e.configFile,n=e.output,r=void 0===n?["consoleLog","exitCode"]:n,i=ht(e,["configFile","output"]),s=at,o=[ut(ut({},i),{output:r})],[4,(l=t,Je(void 0,void 0,void 0,(function(){return et(this,(function(e){return l?[2,JSON.parse(String(p().readFileSync(u().join(process.cwd(),l))))]:[2,{}]}))})))]
-case 2:return[2,s.apply(void 0,[o.concat([c.sent()])])]}var l}))}))}!function(){ct(this,void 0,void 0,(function(){var e,t,n
-return lt(this,(function(r){switch(r.label){case 0:return e=new Promise((function(e,t){(0,i.exec)("git fetch origin master",(function(n){return n?t(n):e()}))})),[4,ft()]
-case 1:return t=r.sent(),console.log("Options:",t),[4,e]
-case 2:return r.sent(),[4,E(t)]
-case 3:return[4,qe(r.sent(),t)]
-case 4:return n=r.sent(),Ge(pt,t,n),[2]}}))}))}()})()})()
+else{var u=Ve(s)
+if(n&&(o.length>0?a.push("Some link ignore patterns were unused!\n\n"+o.join("\n")+"\n"):a.push("All link patterns were used."),"only"===n))return We(a)
+i>0?a.push(u+"\n\n"+i+" links failed."):a.push(u+"\n\nAll links passed!")}return We(a)}},{name:"exitCode",reporter:function(e,t){var n=t.failOnUnusedPatterns,r=t.reportUnusedPatterns,i=e.unusedPatterns,s=e.failedChecks;(n||"only"===r)&&i.length>0&&process.exit(3),s>0&&process.exit(2),process.exit(0)}}]
+function dt(){return ut(this,void 0,void 0,(function(){var t,n,r,i,s,o,u
+return ct(this,(function(c){switch(c.label){case 0:return t=Object.fromEntries(["source","configFile","rootURL","dryRun","reportUnusedPatterns","linkIncludePatternFiles","linkIncludePatterns","linkExcludePatternFiles","linkExcludePatterns","fileIncludePatternFiles","fileIncludePatterns","fileExcludePatternFiles","fileExcludePatterns","output"].reduce((function(t,n){var r=function(t){var n=e.getInput(t)
+try{return JSON.parse(n)}catch(e){if(e instanceof SyntaxError)return n
+throw e}}(n)
+return""===r?t:ht(t,[[n,r]])}),[])),n=t.configFile,r=t.output,i=void 0===r?["consoleLog","exitCode"]:r,s=lt(t,["configFile","output"]),o=ot,u=[at(at({},s),{output:i})],[4,(l=n,Ze(void 0,void 0,void 0,(function(){return Je(this,(function(e){return l?[2,JSON.parse(String(h().readFileSync(a().join(process.cwd(),l))))]:[2,{}]}))})))]
+case 1:return[2,o.apply(void 0,[u.concat([c.sent()])])]}var l}))}))}!function(){ut(this,void 0,void 0,(function(){var e,t,n
+return ct(this,(function(i){switch(i.label){case 0:return e=new Promise((function(e,t){(0,r.exec)("git fetch origin master",(function(n){return n?t(n):e()}))})),[4,dt()]
+case 1:return t=i.sent(),console.log("Options:",t),[4,e]
+case 2:return i.sent(),[4,x(t)]
+case 3:return[4,Be(i.sent(),t)]
+case 4:return n=i.sent(),qe(pt,t,n),[2]}}))}))}()})()})()
