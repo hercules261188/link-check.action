@@ -1238,16 +1238,18 @@ return ke(this,(function(s){switch(s.label){case 0:return i=r,[4,Re(e,t,n)]
 case 1:return i.apply(void 0,[s.sent()]),[2]}}))}))}),s)}))]):[2,r]}}))}))},Oe={},Pe=function(e,t){return we(void 0,void 0,void 0,(function(){var n,r
 return ke(this,(function(i){return n=e.href,(r=Oe[n])?[2,r]:(Oe[n]=Re(e,{},t),[2,Oe[n]])}))}))},Ce=new Set
 const Te=function(e,t){var n=e.link,r=e.url
-return we(void 0,void 0,void 0,(function(){var e,i,s,o,a,u,c,l
-return ke(this,(function(h){switch(h.label){case 0:if(e=t.linkIncludePatterns,i=t.linkExcludePatterns,s=t.dryRun,!function(e,t,n){var r=n.ignore,i=Se(n,["ignore"])
+return we(void 0,void 0,void 0,(function(){var e,i,s,o,a,u,c,l,h
+return ke(this,(function(p){switch(p.label){case 0:if(e=t.linkIncludePatterns,i=t.linkExcludePatterns,s=t.dryRun,!function(e,t,n){var r=n.ignore,i=Se(n,["ignore"])
 if(d().isMatch(e,t,i)){if(r)if(Array.isArray(r)){var s=r.find((function(t){return d().isMatch(e,t,i)}))
 if(s)return Ce.add(s),!1}else if(d().isMatch(e,r,i))return Ce.add(r),!1
 return!0}return!1}(n,e,{ignore:i,bash:!0}))return[3,5]
 if(o=r.href,s)return[2,{link:n,href:n===o?null:o,description:"Skipped because of dry-run",pass:!0}]
-h.label=1
-case 1:return h.trys.push([1,3,,4]),[4,Pe(r,t)]
-case 2:return a=h.sent(),u=a.status,c=a.ok,[2,{link:n,href:n===o?null:o,description:u,pass:c}]
-case 3:return l=h.sent(),[2,{link:n,href:o,description:["Error",l.code&&" "+l.code,l.message&&": "+l.message].filter(Boolean).join(""),pass:!1}]
+p.label=1
+case 1:return p.trys.push([1,3,,4]),[4,Pe(r,t)]
+case 2:return a=p.sent(),u=a.status,c=a.ok,[2,{link:n,href:n===o?null:o,description:u,pass:c}]
+case 3:switch(l=p.sent(),h={link:n,href:o,pass:!1},l.code){case"ENOTFOUND":h.description="Site not found"
+break
+default:h.description=[l.code||"Fetch Error",l.message&&": "+l.message].filter(Boolean).join("")}return[2,h]
 case 4:return[3,6]
 case 5:return[2,{link:n,description:"Excluded",pass:!0}]
 case 6:return[2]}}))}))}
