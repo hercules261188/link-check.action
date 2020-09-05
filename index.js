@@ -1403,14 +1403,14 @@ else{var h=Qe(l,{failsOnly:r})
 if(n&&(u.length>0?c.push("Some link ignore patterns were unused!\n\n"+u.join("\n")):c.push("All link patterns were used."),"only"===n))return Xe(c)
 c.push(h),s>0?c.push(s+"/"+i+" links failed."):c.push("All "+i+" links passed!")}return Xe(c)}},{name:"exitCode",reporter:function(e,t){var n=t.failOnUnusedPatterns,r=e.unusedPatterns,i=e.failedChecksCount
 n&&r.length>0&&process.exit(2),i>0&&process.exit(2),process.exit(0)}}]
-function gt(){return dt(this,void 0,void 0,(function(){var t,n,r,i,s,o,u,c,l,p
-return ft(this,(function(d){switch(d.label){case 0:return t=["source","configFile","rootURL","dryRun","reportUnusedPatterns","linkIncludePatternFiles","linkIncludePatterns","linkExcludePatternFiles","linkExcludePatterns","fileIncludePatternFiles","fileIncludePatterns","fileExcludePatternFiles","fileExcludePatterns","output","failsOnly","verbose"].reduce((function(t,n){var r,i=function(e){switch(e){case"":return
+function gt(){return dt(this,void 0,void 0,(function(){var t,n,r,i,s,o,u,c,l,p,d
+return ft(this,(function(f){switch(f.label){case 0:return t=["source","configFile","rootURL","dryRun","reportUnusedPatterns","linkIncludePatternFiles","linkIncludePatterns","linkExcludePatternFiles","linkExcludePatterns","fileIncludePatternFiles","fileIncludePatterns","fileExcludePatternFiles","fileExcludePatterns","output","failsOnly","verbose"].reduce((function(t,n){var r,i=function(e){switch(e){case"":return
 case"false":return!1
 default:return e}}(function(t){var n=e.getInput(t)
 try{return JSON.parse(n)}catch(e){if(e instanceof SyntaxError)return n
 throw e}}(n))
-return void 0===i?t:pt(pt({},t),((r={})[n]=i,r))}),{}),n=t.configFile,r=t.output,i=void 0===r?["consoleLog","exitCode"]:r,s=t.failsOnly,o=t.verbose,u=void 0!==o&&o,c=_t(t,["configFile","output","failsOnly","verbose"]),l=ht,p=[pt(pt({},c),{output:i,failsOnly:s,verbose:u})],[4,(f=n,rt(void 0,void 0,void 0,(function(){return it(this,(function(e){return f?[2,JSON.parse(String(h().readFileSync(a().join(process.cwd(),f))))]:[2,{}]}))})))]
-case 1:return[2,l.apply(void 0,[p.concat([d.sent()])])]}var f}))}))}!function(){dt(this,void 0,void 0,(function(){var e,t,n
+return void 0===i?t:pt(pt({},t),((r={})[n]=i,r))}),{}),n=t.configFile,r=t.output,i=void 0===r?["consoleLog","exitCode"]:r,s=t.failsOnly,o=void 0===s||s,u=t.verbose,c=void 0!==u&&u,l=_t(t,["configFile","output","failsOnly","verbose"]),p=ht,d=[pt(pt({},l),{output:i,failsOnly:o,verbose:c})],[4,(_=n,rt(void 0,void 0,void 0,(function(){return it(this,(function(e){return _?[2,JSON.parse(String(h().readFileSync(a().join(process.cwd(),_))))]:[2,{}]}))})))]
+case 1:return[2,p.apply(void 0,[d.concat([f.sent()])])]}var _}))}))}!function(){dt(this,void 0,void 0,(function(){var e,t,n
 return ft(this,(function(i){switch(i.label){case 0:return e=new Promise((function(e,t){(0,r.exec)("git fetch origin master",(function(n){return n?t(n):e()}))})),[4,gt()]
 case 1:return(t=i.sent()).verbose&&console.log("Options:",t),[4,e]
 case 2:return i.sent(),[4,x(t)]
