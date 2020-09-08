@@ -2680,7 +2680,7 @@ continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
 return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},xt=function(e,t){var n={}
 for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r])
 if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0
-for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},_t=[{name:"checkAction",reporter:function(e,t){var n=e.totalChecksCount,r=e.failedChecksCount,i=e.entries,s=e.failedEntries,o=e.unusedPatterns,a=t.reportUnusedPatterns,u=t.failsOnly,c=[],l=[],h=u?s:i,p={fileFormat:nt,linkFormat:u?it:rt}
+for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},_t=[{name:"checksAction",reporter:function(e,t){var n=e.totalChecksCount,r=e.failedChecksCount,i=e.entries,s=e.failedEntries,o=e.unusedPatterns,a=t.reportUnusedPatterns,u=t.failsOnly,c=[],l=[],h=u?s:i,p={fileFormat:nt,linkFormat:u?it:rt}
 if(0===n)return tt({summary:"There were no files to check links in.",success:!0})
 if(0===r)return tt({summary:"All links passed the check!",success:!0})
 if(a&&o.length>0){var d=o.map((function(e){return"  - "+e})).join("\n\n")
