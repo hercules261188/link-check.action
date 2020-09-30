@@ -2517,11 +2517,12 @@ for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=
 if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0
 for(r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]])}return n},Te={},Pe=function(e,t){if(!Te[e]){var n=Object.entries(t.linkOptions).find((function(t){var n=t[0]
 return m().isMatch(e,n)})),r=n?n[1]:{},i=r.minTime,s=void 0===i?t.minTime||400:i,o=r.maxConcurrent,a=void 0===o?t.maxConcurrent||1:o
-Te[e]=new(R())({minTime:s,maxConcurrent:a})}return Te[e]},Re=function(e,t,n){return we(void 0,void 0,void 0,(function(){return ke(this,(function(r){return[2,Pe(e.hostname,n).schedule((function(){return Se(e.href,t)}))]}))}))},Oe=function(e,t,n){return void 0===t&&(t={}),we(void 0,void 0,void 0,(function(){var r,i,s
-return ke(this,(function(o){switch(o.label){case 0:return[4,Re(e,Ce(Ce({},t),{method:"HEAD"}),n)]
-case 1:return 405===(r=o.sent()).status?[2,Re(e,Ce(Ce({},t),{method:"GET"}),n)]:429===r.status&&(i=r.headers.get("retry-after"))?(s=1e3*Number(i),[2,new Promise((function(r){setTimeout((function(){return we(void 0,void 0,void 0,(function(){var i
-return ke(this,(function(s){switch(s.label){case 0:return i=r,[4,Oe(e,t,n)]
-case 1:return i.apply(void 0,[s.sent()]),[2]}}))}))}),s)}))]):[2,r]}}))}))},Be={},Ie=function(e,t){return we(void 0,void 0,void 0,(function(){var n,r
+Te[e]=new(R())({minTime:s,maxConcurrent:a})}return Te[e]},Re=function(e,t,n){return we(void 0,void 0,void 0,(function(){return ke(this,(function(r){return[2,Pe(e.hostname,n).schedule((function(){return Se(e.href,t)}))]}))}))},Oe=function(e,t,n){return void 0===t&&(t={}),we(void 0,void 0,void 0,(function(){var r,i,s,o,a,u,c
+return ke(this,(function(l){switch(l.label){case 0:return r=t.retries,i=void 0===r?0:r,s=n.maxRetries,o=void 0===s?3:s,[4,Re(e,Ce(Ce({},t),{method:"HEAD"}),n)]
+case 1:if(429===(a=l.sent()).status&&i<o){if(u=a.headers.get("retry-after"))return c=1e3*Number(u),[2,new Promise((function(r){setTimeout((function(){return we(void 0,void 0,void 0,(function(){var s
+return ke(this,(function(o){switch(o.label){case 0:return s=r,[4,Oe(e,Ce(Ce({},t),{retries:i+1}),n)]
+case 1:return s.apply(void 0,[o.sent()]),[2]}}))}))}),c)}))]}else if(!a.ok)return[2,Re(e,Ce(Ce({},t),{method:"GET"}),n)]
+return[2,a]}}))}))},Be={},Ie=function(e,t){return we(void 0,void 0,void 0,(function(){var n,r
 return ke(this,(function(i){return n=e.href,(r=Be[n])?[2,r]:(Be[n]=Oe(e,{},t),[2,Be[n]])}))}))},Ne=new Set
 const Le=function(e,t){var n=e.link,r=e.url
 return we(void 0,void 0,void 0,(function(){var e,i,s,o,a,u,c,l,h
@@ -2611,11 +2612,12 @@ return"  - "+t+(n?" = "+n:"")+" ("+e.description+")"},fileFormat:function(e){ret
 const nt=function(e,t){void 0===t&&(t={})
 var n=t.entryFormat,r=void 0===n?t.failsOnly?tt:et:n,i=t.entrySeparator,s=void 0===i?"\n\n":i
 return e.map((function(e,n){return r(e,t,n)})).filter(Boolean).join(s)}
-function rt(e,t){return void 0===t&&(t="\n\n"),e&&e.length>0?e.filter(Boolean).join(t):void 0}function it(e){console.log(rt(e))}var st="consoleLog",ot=function(e,t){var n=t.unusedPatternsOnly,r=t.failsOnly,i=e.totalChecksCount,s=e.failedChecksCount,o=e.entries,a=e.failedEntries,u=e.unusedPatterns,c=[],l=r?a:o
-if(0===i)c.push("There were no links to check!")
-else{var h=nt(l,{failsOnly:r})
-if(u.length>0&&c.push("Some link ignore patterns were unused!\n\n"+u.join("\n")),n)return 0===u.length&&c.push("All link patterns were used."),it(c)
-c.push(h),s>0?c.push(s+"/"+i+" links failed."):c.push("All "+i+" links passed!")}return it(c)}
+function rt(e,t){return void 0===t&&(t="\n\n"),e&&e.length>0?e.filter(Boolean).join(t):void 0}function it(e){console.log(rt(e))}var st="consoleLog",ot=function(e,t){var n=t.diff,r=t.unusedPatternsOnly,i=t.failsOnly,s=e.totalChecksCount,o=e.failedChecksCount,a=e.entries,u=e.failedEntries,c=e.unusedPatterns,l=[],h=i?u:a
+if(0===s)l.push("There were no links to check!")
+else{var p=nt(h,{failsOnly:i})
+if(n)r&&console.warn("unusedPatternsOnly and diff are mutually exclusive! Skipping.")
+else if(c.length>0&&l.push("Some link ignore patterns were unused!\n\n"+c.join("\n")),r)return 0===c.length&&l.push("All link patterns were used."),it(l)
+l.push(p),o>0?l.push(o+"/"+s+" links failed."):l.push("All "+s+" links passed!")}return it(l)}
 function at(e){var t=e.success,r=e.conclusion,i=void 0===r?t?"success":"failure":r,s=e.summarySegments,o=e.descriptionSegments,a=e.summary,u=void 0===a?rt(s,", "):a,c=e.description,l=void 0===c?rt(o,"\n\n"):c
 n.setOutput("conclusion",i)
 var h={summary:u}
