@@ -2301,7 +2301,9 @@ const E=function(e){var t=e.fileIncludePatterns,n=e.fileExcludePatterns,r=e.orig
 return v(void 0,void 0,void 0,(function(){var e,i,s,o,a
 return x(this,(function(u){switch(u.label){case 0:return r?[4,b(r)]:[3,2]
 case 1:u.sent(),u.label=2
-case 2:return[4,v(void 0,void 0,void 0,(function(){return x(this,(function(e){return[2,_("git diff -U0 --minimal origin/master")]}))}))]
+case 2:return[4,v(void 0,void 0,void 0,(function(){var e
+return x(this,(function(t){switch(t.label){case 0:return[4,_("git merge-base origin/master HEAD")]
+case 1:return e=t.sent().trim(),[2,_("git diff -U0 --minimal "+e)]}}))}))]
 case 3:for(e=u.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),i=[],s=1;s<e.length;s+=2)o=e[s],m().isMatch(o,t,{ignore:n})&&(a=e[s+1].split("\n").filter((function(e){return e.startsWith("+")}))).length>0&&i.push({filePath:o,content:a})
 return[2,i]}}))}))}
 var D=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
@@ -2625,7 +2627,7 @@ l&&(h.text_description=l),n.setOutput("output",JSON.stringify(h))}var ut=functio
 return"  - "+(e.pass?":heavy_check_mark:":":x:")+" "+t+(n&&n!==t?" = "+n:"")+" ("+r+")"},lt=function(e){var t=e.link,n=e.href
 return"  - "+t+(n&&n!==t?" = "+n:"")+" ("+e.description+")"}
 var ht="checksAction",pt=function(e,t){var n=e.totalChecksCount,r=e.failedChecksCount,i=e.entries,s=e.failedEntries,o=e.unusedPatterns,a=t.unusedPatternsOnly,u=t.failsOnly,c=t.diff,l=[],h=[],p=u?s:i,d={fileFormat:ut,linkFormat:u?lt:ct}
-if(0===n)return at({summary:"There were no files to check links in.",success:!0})
+if(0===n)return at({summary:"There were no links to check.",success:!0})
 if(0===r)return at({summary:"All links passed the check!",success:!0})
 if(!c&&o.length>0){var f=o.map((function(e){return"  - "+e})).join("\n\n")
 h.push("# Unused link exclusion patterns",f)}if(a)return 0===o.length?l.push("All link patterns were used"):l.push("Some link patterns were unused"),at({summarySegments:l,descriptionSegments:h,success:!1})
