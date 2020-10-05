@@ -2294,16 +2294,21 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},_=function(e){return new Promise((function(t,n){return(0,s.exec)(e,(function(e,r){return e?n(e):t(r)}))}))},b=function(e){return v(void 0,void 0,void 0,(function(){return x(this,(function(t){switch(t.label){case 0:return[4,_("git remote remove origin")]
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},_=function(e){return new Promise((function(t,n){return(0,s.exec)(e,(function(e,r){return e?n(e):t(r)}))}))},b=function(e){return v(void 0,void 0,void 0,(function(){return x(this,(function(t){switch(t.label){case 0:return t.trys.push([0,3,,4]),[4,_("git remote remove origin")]
 case 1:return t.sent(),[4,_("git remote add origin "+e)]
-case 2:return t.sent(),[2]}}))}))}
+case 2:return t.sent(),[3,4]
+case 3:throw t.sent(),new Error("There was an error switching origin to "+e+"!")
+case 4:return[2]}}))}))}
 const E=function(e){var t=e.fileIncludePatterns,n=e.fileExcludePatterns,r=e.origin
 return v(void 0,void 0,void 0,(function(){var e,i,s,o,a
 return x(this,(function(u){switch(u.label){case 0:return r?[4,b(r)]:[3,2]
 case 1:u.sent(),u.label=2
-case 2:return[4,v(void 0,void 0,void 0,(function(){var e
-return x(this,(function(t){switch(t.label){case 0:return[4,_("git merge-base origin/master HEAD")]
-case 1:return e=t.sent().trim(),[2,_("git diff -U0 --minimal "+e)]}}))}))]
+case 2:return[4,v(void 0,void 0,void 0,(function(){var e,t
+return x(this,(function(n){switch(n.label){case 0:e="origin/master",n.label=1
+case 1:return n.trys.push([1,3,,4]),[4,_("git merge-base origin/master HEAD")]
+case 2:return e=n.sent().trim(),[3,4]
+case 3:throw t=n.sent(),new Error('There was an error trying to get a merge-base! Falling back on "origin/master". ('+t+")")
+case 4:try{return[2,_("git diff -U0 --minimal "+e+" HEAD")]}catch(t){throw new Error("There was an error trying to get a diff between "+e+" and HEAD! ("+t+")")}return[2]}}))}))]
 case 3:for(e=u.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),i=[],s=1;s<e.length;s+=2)o=e[s],m().isMatch(o,t,{ignore:n})&&(a=e[s+1].split("\n").filter((function(e){return e.startsWith("+")}))).length>0&&i.push({filePath:o,content:a})
 return[2,i]}}))}))}
 var D=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
