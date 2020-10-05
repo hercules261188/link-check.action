@@ -2294,7 +2294,7 @@ break}if(6===s[0]&&o.label<i[1]){o.label=i[1],i=s
 break}if(i&&o.label<i[2]){o.label=i[2],o.ops.push(s)
 break}i[2]&&o.ops.pop(),o.trys.pop()
 continue}s=t.call(e,o)}catch(e){s=[6,e],r=0}finally{n=i=0}if(5&s[0])throw s[1]
-return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},_=function(e){return new Promise((function(t,n){return(0,s.exec)(e,(function(e,r){return e?n(e):t(r)}))}))},b=function(e){return v(void 0,void 0,void 0,(function(){return x(this,(function(t){switch(t.label){case 0:return t.trys.push([0,3,,4]),[4,_("git remote remove origin")]
+return{value:s[0]?s[1]:void 0,done:!0}}([s,a])}}},_=function(e){return new Promise((function(t,n){return(0,s.exec)(e,(function(e,r,i){return e?n(new Error(JSON.stringify({error:e,stdout:r,stderr:i}))):t(r)}))}))},b=function(e){return v(void 0,void 0,void 0,(function(){return x(this,(function(t){switch(t.label){case 0:return t.trys.push([0,3,,4]),[4,_("git remote remove origin")]
 case 1:return t.sent(),[4,_("git remote add origin "+e)]
 case 2:return t.sent(),[3,4]
 case 3:throw t.sent(),new Error("There was an error switching origin to "+e+"!")
