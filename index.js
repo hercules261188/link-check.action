@@ -2303,12 +2303,13 @@ const E=function(e){var t=e.fileIncludePatterns,n=e.fileExcludePatterns,r=e.orig
 return v(void 0,void 0,void 0,(function(){var e,i,s,o,a
 return x(this,(function(u){switch(u.label){case 0:return r?[4,b(r)]:[3,2]
 case 1:u.sent(),u.label=2
-case 2:return[4,v(void 0,void 0,void 0,(function(){var e,t
-return x(this,(function(n){switch(n.label){case 0:e="origin/master",n.label=1
-case 1:return n.trys.push([1,3,,4]),[4,_("git merge-base origin/master HEAD")]
-case 2:return e=n.sent().trim(),[3,4]
-case 3:throw t=n.sent(),new Error('There was an error trying to get a merge-base! Falling back on "origin/master". ('+t+")")
-case 4:try{return[2,_("git diff -U0 --minimal "+e+" HEAD")]}catch(t){throw new Error("There was an error trying to get a diff between "+e+" and HEAD! ("+t+")")}return[2]}}))}))]
+case 2:return[4,v(void 0,void 0,void 0,(function(){var e
+return x(this,(function(t){switch(t.label){case 0:return[4,(void 0===n&&(n="origin/master"),v(void 0,void 0,void 0,(function(){return x(this,(function(e){switch(e.label){case 0:return e.trys.push([0,2,,3]),[4,_("git merge-base "+n+" HEAD")]
+case 1:return[2,e.sent().trim()]
+case 2:return e.sent(),console.warn('There was an error trying to get a merge-base! Falling back to "'+n+'"'),[2,n]
+case 3:return[2]}}))})))]
+case 1:e=t.sent()
+try{return[2,_("git diff -U0 --minimal "+e+" HEAD")]}catch(t){throw new Error("There was an error trying to get a diff between "+e+" and HEAD! ("+t+")")}return[2]}var n}))}))]
 case 3:for(e=u.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),i=[],s=1;s<e.length;s+=2)o=e[s],m().isMatch(o,t,{ignore:n})&&(a=e[s+1].split("\n").filter((function(e){return e.startsWith("+")}))).length>0&&i.push({filePath:o,content:a})
 return[2,i]}}))}))}
 var D=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
