@@ -2310,7 +2310,7 @@ case 2:return e.sent(),console.warn('There was an error trying to get a merge-ba
 case 3:return[2]}}))})))]
 case 1:e=t.sent()
 try{return[2,_("git diff -U0 --minimal "+e+" HEAD")]}catch(t){throw new Error("There was an error trying to get a diff between "+e+" and HEAD! ("+t+")")}return[2]}var n}))}))]
-case 3:for(e=u.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),i=[],s=1;s<e.length;s+=2)o=e[s],m().isMatch(o,t,{ignore:n})&&(a=e[s+1].split("\n").filter((function(e){return e.startsWith("+")}))).length>0&&i.push({filePath:o,content:a})
+case 3:for(e=u.sent().split(/^diff --git.* b\/(.*)\n(?:.*\n){4}/gm),i=[],s=1;s<e.length;s+=2)o=e[s],m().isMatch(o,t,{ignore:n})&&(a=e[s+1].split("\n").filter((function(e){return e.startsWith("+")})).map((function(e){return e.slice(1)})).join("\n")).length>0&&i.push({filePath:o,content:a})
 return[2,i]}}))}))}
 var D=function(e,t,n,r){return new(n||(n=Promise))((function(i,s){function o(e){try{u(r.next(e))}catch(e){s(e)}}function a(e){try{u(r.throw(e))}catch(e){s(e)}}function u(e){var t
 e.done?i(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(o,a)}u((r=r.apply(e,t||[])).next())}))},A=function(e,t){var n,r,i,s,o={label:0,sent:function(){if(1&i[0])throw i[1]
@@ -2550,8 +2550,8 @@ case 5:return[2,{link:n,description:"Excluded",pass:!0}]
 case 6:return[2]}}))}))}
 var Me=function(e,t,n){void 0===n&&(n=function(e){return e[1]})
 for(var r=[],i=t.exec(e);null!==i;){var s=n(i)
-s&&r.push(s),i=t.exec(e)}return r},je=function(e,t){switch(c().extname(e)){case".md":case".mdx":var n=Me(t,/\[.*?\]\((?:<((?:\(.*?\)|.)*?)>|((?:\(.*?\)|.)*?))(?: ["'].*?["'])?\)/gm,(function(e){return e[2]||e[1]})),r=Me(t,/href="(.*?)"/gm),i=n.concat(r)
-return i?i.filter(Boolean).map((function(e){return e.startsWith("/static")?e.slice(7):e})):null
+s&&r.push(s),i=t.exec(e)}return r},je=function(e,t){switch(c().extname(e)){case".md":case".mdx":var n=Me(t,/\[.*?\]\((?:<((?:\(.*?\)|.)*?)>|((?:\(.*?\)|.)*?))(?: ["'].*?["'])?\)/gm,(function(e){return e[2]||e[1]})),r=Me(t,/\[.*\]:\s*\n?\s*(.*)/gm,(function(e){return e[2]||e[1]})),i=Me(t,/href="(.*?)"/gm),s=n.concat(r).concat(i)
+return s?s.filter(Boolean).map((function(e){return e.startsWith("/static")?e.slice(7):e})):null
 case".html":return Me(t,/href="(.*?)"/gm)
 case".json":return Me(t,/"(?:(?:https?:)?\/\/)?(?:)"/gm)
 default:return Me(t,/(((https?:\/\/)[A-Za-z0-9.-]+|(?:www\.)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/gm,(function(e){return e[0]}))}}
